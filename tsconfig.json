@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "pretty": true,
+    "jsx":"react",
+    "types": [
+      "@types/react",
+      "@types/react-dom"
+    ]
+  }
+}

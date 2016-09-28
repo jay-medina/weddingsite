@@ -2,7 +2,7 @@ const path = require('path');
 const plugins = require('./buildFiles/plugins.js');
 
 const PATHS = {
-  app: path.join(__dirname, 'app/index.jsx'),
+  app: path.join(__dirname, 'app/index.tsx'),
   build: 'dist/'
 };
 
@@ -15,8 +15,9 @@ module.exports = {
     filename: 'index.js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['','.ts', '.tsx', '.js', '.jsx']
   },
+  devtool: 'source-map',
   module: {
       loaders: [
           {
@@ -28,11 +29,8 @@ module.exports = {
           loader: 'html'
         },
         {
-          test: /\.jsx?$/,
-          loader: ['babel-loader'],
-          query: {
-            presets: ['es2015', 'react']
-          }
+          test: /\.tsx?$/,
+          loader: "ts-loader"
         }
       ]
   },
