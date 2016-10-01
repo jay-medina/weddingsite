@@ -1,32 +1,29 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import Container from './Container';
+
+import './index.css';
 
 class MenuOption extends React.Component<{}, {}> {
   render() {
-    return <li>{this.props.children}</li>
+    return <li className="wedding_menu_item">{this.props.children}</li>
   }
 }
 class Menu extends React.Component<{}, {}> {
   render() {
-    return <ul>{this.props.children}</ul>
-  }
-}
-
-class Container extends React.Component<{}, {}>{
-  render() {
-    return <div>{this.props.children}</div>
+    return <ul className="wedding_menu pull-right">{this.props.children}</ul>
   }
 }
 
 class HeaderTitle extends React.Component<{}, {}> {
   render() {
-    return <h1>{this.props.children}</h1>
+    return <h1 className="wedding_title pull-left">{this.props.children}</h1>
   }
 }
 
 class Header extends React.Component<{}, {}> {
   render() {
-    return <Container>{this.props.children}</Container>;
+    return <Container className="wedding_header">{this.props.children}</Container>;
   }
 }
 
@@ -37,10 +34,14 @@ ReactDOM.render(
     <Header>
       <HeaderTitle>Jose &amp; Mercedes</HeaderTitle>
       <Menu>
-        <MenuOption>One</MenuOption>
-        <MenuOption>Two</MenuOption>
-        <MenuOption>Three</MenuOption>
+        <MenuOption>Our Story</MenuOption>
+        <MenuOption>When &amp; Where</MenuOption>
+        <MenuOption>Registry</MenuOption>
+        <MenuOption>RSVP</MenuOption>
       </Menu>
     </Header>
+    <Container className="mainContainer">
+      Hello world
+    </Container>
   </Container>
   , document.getElementById('app'));
