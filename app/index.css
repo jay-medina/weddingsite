@@ -3,7 +3,7 @@
 }
 html, body, #app {
   font-size: 12px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #FFFFFF;
   margin: 0;
   color: #000000;
@@ -14,6 +14,9 @@ html, body, #app {
 }
 .pull-right {
   float:right;
+}
+.align-center {
+  text-align: center;
 }
 
 .wedding_header {
@@ -59,7 +62,39 @@ html, body, #app {
   color: #9E9E9E;
 }
 
-.mainContainer {
+.wedding_section {
   background: #29B6F6;
+  color: #FFF;
   padding: 15rem 0;
+  font-size: 7rem;
+  text-transform: uppercase;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-weight: 100;
+}
+
+.wedding_ourStory {
+  background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53e4e2d2e4b01ca7c4765bbb/1407509203716/img_0330-darkened.jpg?format=2500w);
+}
+
+.wedding_bestFriends {
+  background-position: top center;
+  background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);
+}
+
+.wedding_ourStoryText {
+  padding: 8rem 0 10rem;
+  margin: 0 auto;
+  width: 60%;
+  font-size: 1.25rem;
+}
+
+.wedding_sectionTitle {
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.wedding_sectionBody {
+  line-height: 2rem;
 }

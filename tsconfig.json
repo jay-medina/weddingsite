@@ -3,7 +3,6 @@
     "allowJs": true,
     "target": "es5",
     "module": "commonjs",
-    "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
