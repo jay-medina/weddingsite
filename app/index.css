@@ -62,7 +62,7 @@ html, body, #app {
   color: #9E9E9E;
 }
 
-.wedding_section {
+.wedding_pic_section {
   background: #29B6F6;
   color: #FFF;
   padding: 15rem 0;
@@ -82,10 +82,10 @@ html, body, #app {
   background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);
 }
 
-.wedding_ourStoryText {
+.wedding_text_section {
   padding: 8rem 0 10rem;
   margin: 0 auto;
-  width: 60%;
+  width: 75%;
   font-size: 1.25rem;
 }
 
@@ -97,4 +97,29 @@ html, body, #app {
 
 .wedding_sectionBody {
   line-height: 2rem;
+}
+
+.wedding_sectionPicBody {
+  font-size: 1em;
+  margin: 0 auto;
+  padding: 5rem 0;
+  width: 90%;
+}
+
+.wedding_sectionImg {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .wedding_sectionPicBody {
+    padding: 12rem 0;
+    width: 80%;
+  }
+
+  .wedding_sectionImg {
+    width: 280px;
+    margin: 0.5rem 1rem;
+    border: 1px solid;
+  }
 }

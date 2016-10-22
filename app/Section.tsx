@@ -24,9 +24,26 @@ export class SectionBody extends React.Component<{}, {}> {
 export class Section extends React.Component<SectionProps, {}> {
   render() {
     return (
-      <div className={`align-center ${this.props.className}`}>
+      <div className={`align-center ${this.props.className || ''}`}>
         {this.props.children}
       </div>
     );
+  }
+}
+
+export interface SectionPictureBodyProps {
+  urls: Array<string>
+}
+
+export class SectionPictureBody extends React.Component<SectionPictureBodyProps,{}> {
+  renderImages() {
+    return this.props.urls.map(
+      (url, index) => <img key={index} className="wedding_sectionImg" src={url} />
+    )
+  }
+  render() {
+    return (
+      <div>{this.renderImages()}</div>
+    )
   }
 }
