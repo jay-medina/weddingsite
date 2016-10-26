@@ -23,10 +23,32 @@ function getPlugins() {
     ];
   }
 
-  return [new HtmlWebpackPlugin({
-    title: 'M&JFiesta2Forever',
-    template: 'app/templates/index.ejs'
-  })];
+  return [
+    new HtmlWebpackPlugin({
+      title: 'M&amp;JFiesta2Forever',
+      filename: 'index.html',
+      chunks: ['index'],
+      template: 'buildFiles/template.ejs'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'M&amp;JFiesta2Forever',
+      filename: 'whenandwhere/index.html',
+      chunks: ['whenAndWhere'],
+      template: 'buildFiles/template.ejs'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'M&amp;JFiesta2Forever',
+      filename: 'registry/index.html',
+      chunks: ['registry'],
+      template: 'buildFiles/template.ejs'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'M&amp;JFiesta2Forever',
+      filename: 'rsvp/index.html',
+      chunks: ['rsvp'],
+      template: 'buildFiles/template.ejs'
+    })
+  ];
 }
 
 module.exports = {

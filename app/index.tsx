@@ -2,22 +2,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Container from './views/Container';
 import { Section, SectionBody, SectionTitle, SectionPictureBody } from './views/Section';
-import { MenuOption, Menu, HeaderTitle, Header } from './views/Header';
+import { WeddingHeader } from './views/WeddingHeader';
 
 import './index.css';
 
-
 ReactDOM.render(
   <Container>
-    <Header>
-      <HeaderTitle>Jose &amp; Mercedes</HeaderTitle>
-      <Menu>
-        <MenuOption>Our Story</MenuOption>
-        <MenuOption>When &amp; Where</MenuOption>
-        <MenuOption>Registry</MenuOption>
-        <MenuOption>RSVP</MenuOption>
-      </Menu>
-    </Header>
+    <WeddingHeader />
     <Section className="wedding_pic_section wedding_ourStory"> Our Story </Section>
     <Section className="wedding_text_section">
       <SectionTitle>We met in college...</SectionTitle>

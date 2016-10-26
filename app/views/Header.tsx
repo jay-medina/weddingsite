@@ -1,14 +1,18 @@
 import * as React from 'react';
 import Container from './Container';
 
-export class MenuOption extends React.Component<{}, {}> {
+export interface MenuOptionProps {
+  link: string
+}
+
+export class MenuOption extends React.Component<MenuOptionProps, {}> {
   render() {
-    return <li className="wedding_menu_item">{this.props.children}</li>
+    return <a className="wedding_menu_item" href={this.props.link}>{this.props.children}</a>
   }
 }
 export class Menu extends React.Component<{}, {}> {
   render() {
-    return <ul className="wedding_menu pull-right">{this.props.children}</ul>
+    return <div className="wedding_menu pull-right">{this.props.children}</div>
   }
 }
 

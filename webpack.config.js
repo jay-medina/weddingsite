@@ -1,23 +1,20 @@
 const path = require('path');
 const plugins = require('./buildFiles/plugins.js');
 
-const PATHS = {
-  app: path.join(__dirname, 'app/index.tsx'),
-  build: 'dist/'
-};
-
 module.exports = {
   entry: {
-    app: PATHS.app
+    index: './app/index.tsx',
+    whenAndWhere: './app/when_and_where.tsx',
+    registry: './app/registry.tsx',
+    rsvp: './app/rsvp.tsx'
   },
   output: {
-    path: PATHS.build,
-    filename: 'index.js'
+    path: 'dist/',
+    filename: 'js/[name].js'
   },
   resolve: {
     extensions: ['','.ts', '.tsx', '.js', '.jsx']
   },
-  devtool: 'source-map',
   module: {
       loaders: [
         {
