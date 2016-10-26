@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+a:visited {
+  color: black;
+}
 html, body, #app {
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
@@ -56,6 +59,7 @@ html, body, #app {
   font-size: 1.25em;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .wedding_menu_item:hover {
