@@ -24,8 +24,8 @@ function getPlugins() {
   }
 
   return [new HtmlWebpackPlugin({
-    title: 'M&JTogetherForever',
-    template: 'app/index.ejs'
+    title: 'M&JFiesta2Forever',
+    template: 'app/templates/index.ejs'
   })];
 }
 
