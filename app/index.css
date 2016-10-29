@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-a:visited {
+a {
   color: black;
 }
 html, body, #app {
