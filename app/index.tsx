@@ -9,7 +9,19 @@ import './index.css';
 ReactDOM.render(
   <Container>
     <WeddingHeader />
-    <Section className="wedding_pic_section wedding_ourStory"> Our Story </Section>
+    <Section className="wedding_pic_section wedding_ourStory">
+      <SectionBody className="wedding_ourStory--body">
+          <div className="wedding_ourStory--body-name">
+          Jose <br />
+          <div className="wedding_ourStory--body-amp">&amp;</div>
+          Mercedes <br />
+          </div>
+          <div className="wedding_ourStory--body-date">
+          Are Tieing the Knot <br />
+          11/4/2017
+          </div>
+      </SectionBody >
+    </Section>
     <Section className="wedding_text_section">
       <SectionTitle>We met in college...</SectionTitle>
       <SectionBody>

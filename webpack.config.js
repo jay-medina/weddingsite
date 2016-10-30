@@ -3,10 +3,7 @@ const plugins = require('./buildFiles/plugins.js');
 
 module.exports = {
   entry: {
-    index: './app/index.tsx',
-    whenAndWhere: './app/when_and_where.tsx',
-    registry: './app/registry.tsx',
-    rsvp: './app/rsvp.tsx'
+    index: './app/index.tsx'
   },
   output: {
     path: 'dist/',
@@ -28,6 +25,10 @@ module.exports = {
         {
           test: /\.tsx?$/,
           loader: "ts-loader"
+        },
+        {
+          test: /\.(jpg|png)$/,
+          loader: 'file'
         }
       ]
   },

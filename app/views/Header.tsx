@@ -12,13 +12,7 @@ export class MenuOption extends React.Component<MenuOptionProps, {}> {
 }
 export class Menu extends React.Component<{}, {}> {
   render() {
-    return <div className="wedding_menu pull-right">{this.props.children}</div>
-  }
-}
-
-export class HeaderTitle extends React.Component<{}, {}> {
-  render() {
-    return <h1 className="wedding_title pull-left">{this.props.children}</h1>
+    return <div className="wedding_menu">{this.props.children}</div>
   }
 }
 

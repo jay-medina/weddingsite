@@ -13,11 +13,13 @@ export class SectionTitle extends React.Component<{}, {}> {
   }
 }
 
-export class SectionBody extends React.Component<{}, {}> {
+export class SectionBody extends React.Component<SectionProps, {}> {
   render() {
     return (
-      <div className="wedding_sectionBody">{this.props.children}</div>
-    )
+      <div className={`wedding_sectionBody ${this.props.className}`}>
+        {this.props.children}
+      </div>
+    );
   }
 }
 
