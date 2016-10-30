@@ -17,7 +17,7 @@ ReactDOM.render(
           Mercedes <br />
           </div>
           <div className="wedding_ourStory--body-date">
-          Are Tieing the Knot <br />
+          ~ Are Tieing the Knot ~ <br />
           11/4/2017
           </div>
       </SectionBody >
@@ -45,12 +45,6 @@ ReactDOM.render(
          'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd624e4b0fef6abe1f013/1406916190056/img_0436-edit.jpg?format=750w',
         ]
       }/>
-    </Section>
-    <Section className="wedding_pic_section wedding_ourStory">
-      He Proposed
-    </Section>
-    <Section className="wedding_pic_section wedding_ourStory">
-      She said yes
     </Section>
   </Container>
   ,document.getElementById('app'));

@@ -70,16 +70,23 @@ html, body, #app {
   background-position: center center;
   background-repeat: no-repeat;
   font-weight: 100;
+  z-index: 2;
 }
 
 .wedding_ourStory {
+  background-attachment: fixed;
   background-size: cover;
   background-position: top;
   background-image: url('./images/ourStory.jpg');
+  position:relative;
+  min-height: 568px;
+  overflow: hidden;
 }
 
 .wedding_ourStory--body {
   padding: 5rem 0 20rem 65%;
+  position:fixed;
+  z-index: 0;
 }
 
 .wedding_ourStory--body-name {
@@ -98,6 +105,7 @@ html, body, #app {
 }
 
 .wedding_bestFriends {
+  padding: 20rem 0;
   background-position: top center;
   background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);
 }
