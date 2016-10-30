@@ -37,9 +37,9 @@ ReactDOM.render(
     <Section className="wedding_sectionPicBody">
       <SectionPictureBody urls={
         [
-         'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd623e4b0fef6abe1f009/1406916132870/img_0190.jpg?format=750w',
-         'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd624e4b0fef6abe1f00f/1406916134467/img_0346.jpg?format=750w',
-         'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd624e4b0fef6abe1f013/1406916190056/img_0436-edit.jpg?format=750w',
+         './images/pic1.jpg',
+         './images/pic2.jpg',
+         './images/pic3.jpg',
          'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd623e4b0fef6abe1f009/1406916132870/img_0190.jpg?format=750w',
          'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd624e4b0fef6abe1f00f/1406916134467/img_0346.jpg?format=750w',
          'https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/53dae35ee4b0cfc1a4b33312/53dbd624e4b0fef6abe1f013/1406916190056/img_0436-edit.jpg?format=750w',

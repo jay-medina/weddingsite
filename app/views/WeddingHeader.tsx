@@ -2,14 +2,16 @@ import * as React from 'react';
 import * as $ from 'jquery';
 import { MenuOption, Menu, Header } from './Header';
 
+const SCROLL_OFFSET = 200;
+
 function scrollHandler($el: JQuery) {
   const originalTop = $el.offset().top;
-  
+
   $(window).off('scroll')
             .on('scroll', () => {
               const currentOffset = $el.offset();
 
-              if(currentOffset.top >= originalTop + 50) {
+              if(currentOffset.top >= originalTop + SCROLL_OFFSET) {
                 $el.addClass('scrolled');
               }
               else {
