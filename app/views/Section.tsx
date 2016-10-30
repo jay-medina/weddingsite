@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Container from './Container';
 
+const images = require('../images/images');
+
 export interface SectionProps {
   className? : string
 }
@@ -33,14 +35,12 @@ export class Section extends React.Component<SectionProps, {}> {
   }
 }
 
-export interface SectionPictureBodyProps {
-  urls: Array<string>
-}
 
-export class SectionPictureBody extends React.Component<SectionPictureBodyProps,{}> {
+export class SectionPictureBody extends React.Component<{},{}> {
   renderImages() {
-    return this.props.urls.map(
+    return images.map(
       (url, index) => <img key={index} className="wedding_sectionImg" src={url} />
+
     )
   }
   render() {
