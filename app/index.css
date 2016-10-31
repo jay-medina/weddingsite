@@ -12,6 +12,11 @@ html, body, #app {
   color: #000000;
 }
 
+.section-wrapper {
+  background-color:white;
+  position:relative;
+}
+
 .align-center {
   text-align: center;
 }
@@ -89,8 +94,9 @@ html, body, #app {
   background-size: cover;
   background-position: 0 60%;
   background-image: url('./images/pic3.jpg');
-  position:relative;
-  min-height: 658px;
+  position: static;
+  min-height: 720px;
+  min-height: 95vh;
   overflow: hidden;
 }
 

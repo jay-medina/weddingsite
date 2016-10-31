@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/mrfunkycold/weddingsite#readme",
   "devDependencies": {
+    "@types/node": "^6.0.46",
     "@types/react": "^0.14.37",
+    "@types/jquery": "^2.0.33",
+    "@types/react-dom": "^0.14.17",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
@@ -32,8 +35,6 @@
     "webpack-dev-server": "^1.15.2"
   },
   "dependencies": {
-    "@types/jquery": "^2.0.33",
-    "@types/react-dom": "^0.14.17",
     "jquery": "^3.1.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1"

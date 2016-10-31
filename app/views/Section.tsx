@@ -18,7 +18,7 @@ export class SectionTitle extends React.Component<{}, {}> {
 export class SectionBody extends React.Component<SectionProps, {}> {
   render() {
     return (
-      <div className={`wedding_sectionBody ${this.props.className}`}>
+      <div className={`wedding_sectionBody ${this.props.className || ''}`}>
         {this.props.children}
       </div>
     );
@@ -28,8 +28,10 @@ export class SectionBody extends React.Component<SectionProps, {}> {
 export class Section extends React.Component<SectionProps, {}> {
   render() {
     return (
-      <div className={`align-center ${this.props.className || ''}`}>
-        {this.props.children}
+      <div className='section-wrapper'>
+        <div className={`align-center ${this.props.className || ''}`}>
+          {this.props.children}
+        </div>
       </div>
     );
   }
