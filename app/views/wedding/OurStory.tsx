@@ -5,7 +5,7 @@ import Overlay from '../common/Overlay';
 export function OurStory() {
   return (
     <div>
-      <Section className="wedding_pic_section wedding_ourStory">
+      <Section id="ourStory" className="wedding_pic_section wedding_ourStory">
         <Overlay />
         <SectionBody className="wedding_ourStory--body">
             <div className="wedding_ourStory--body-name title">
