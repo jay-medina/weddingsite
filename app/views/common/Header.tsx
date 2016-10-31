@@ -12,12 +12,21 @@ export class MenuOption extends React.Component<MenuOptionProps, {}> {
 }
 export class Menu extends React.Component<{}, {}> {
   render() {
-    return <div className="wedding_menu">{this.props.children}</div>
+    return <Container className="wedding_menu">{this.props.children}</Container>
   }
 }
 
 export class Header extends React.Component<{}, {}> {
   render() {
     return <Container className="wedding_header">{this.props.children}</Container>;
+  }
+}
+
+export class MobileNav extends React.Component<{}, {}> {
+  render() {
+    return (
+      <Container className="wedding_mobile-nav">
+        <button className={'hamburger'}></button>
+      </Container>);
   }
 }

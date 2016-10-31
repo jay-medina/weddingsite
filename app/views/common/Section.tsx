@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Container from './Container';
 
-const images = require('../images/images');
+const images = require('../../images/images');
 
 export interface SectionProps {
   className? : string
@@ -10,7 +10,7 @@ export interface SectionProps {
 export class SectionTitle extends React.Component<{}, {}> {
   render() {
     return (
-      <div className="wedding_sectionTitle">{this.props.children}</div>
+      <div className="wedding_sectionTitle title">{this.props.children}</div>
     )
   }
 }

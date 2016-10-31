@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as $ from 'jquery';
-import { MenuOption, Menu, Header } from './Header';
+import { MenuOption, Menu, Header, MobileNav } from '../common/Header';
 
 const SCROLL_OFFSET = 200;
 
@@ -24,6 +24,7 @@ export class WeddingHeader extends React.Component<{},{}> {
   render() {
     return (
       <Header>
+        <MobileNav />
         <Menu>
           <MenuOption link="/" >Our Story</MenuOption>
           <MenuOption link="/whenandwhere" >When &amp; Where</MenuOption>
