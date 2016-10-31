@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 interface IContainer {
-  className?: string
+  className?: string,
+  id?: string
 }
 
 class Container extends React.Component<IContainer, {}>{
