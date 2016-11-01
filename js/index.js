@@ -57,8 +57,8 @@
 	ReactDOM.render(React.createElement(Container_1.default, null, 
 	    React.createElement(WeddingHeader_1.WeddingHeader, null), 
 	    React.createElement(OurStory_1.OurStory, null), 
-	    React.createElement(BetterTogether_1.BetterTogether, null), 
 	    React.createElement(WhenAndWhere_1.WhenAndWhere, null), 
+	    React.createElement(BetterTogether_1.BetterTogether, null), 
 	    React.createElement(Registry_1.Registry, null)), document.getElementById('app'));
 
 
@@ -21638,8 +21638,8 @@
 	            React.createElement(Header_1.MobileNav, null), 
 	            React.createElement(Header_1.Menu, null, 
 	                React.createElement(Header_1.MenuOption, {link: "#ourStory"}, "Our Story"), 
+	                React.createElement(Header_1.MenuOption, {link: "#thewedding"}, "The Wedding"), 
 	                React.createElement(Header_1.MenuOption, {link: "#betterTogether"}, "Better Together"), 
-	                React.createElement(Header_1.MenuOption, {link: "#whenandwhere"}, "When & Where"), 
 	                React.createElement(Header_1.MenuOption, {link: "#registry"}, "Registry"))));
 	    };
 	    WeddingHeader.prototype.componentDidMount = function () {
@@ -31964,10 +31964,10 @@
 	var Container_1 = __webpack_require__(172);
 	var Section_1 = __webpack_require__(174);
 	function WhenAndWhere() {
-	    return (React.createElement(Container_1.default, {id: "whenandwhere"}, 
-	        React.createElement(Section_1.Section, {className: "wedding_pic_section wedding_bestFriends"}, " When And Where "), 
+	    return (React.createElement(Container_1.default, {id: "thewedding"}, 
+	        React.createElement(Section_1.Section, {className: "wedding_pic_section wedding_bestFriends"}, " The Wedding "), 
 	        React.createElement(Section_1.Section, {className: "wedding_text_section"}, 
-	            React.createElement(Section_1.SectionTitle, null, "When And Where"), 
+	            React.createElement(Section_1.SectionTitle, null, "The Wedding"), 
 	            React.createElement(Section_1.SectionBody, null, "When And Where Section"))));
 	}
 	exports.WhenAndWhere = WhenAndWhere;
