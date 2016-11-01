@@ -12,8 +12,8 @@ ReactDOM.render(
   <Container>
     <WeddingHeader />
     <OurStory />
-    <BetterTogether />
     <WhenAndWhere />
+    <BetterTogether />
     <Registry />
   </Container>
   ,document.getElementById('app'));

@@ -26,8 +26,8 @@ export class WeddingHeader extends React.Component<{},{}> {
         <MobileNav />
         <Menu>
           <MenuOption link="#ourStory" >Our Story</MenuOption>
+          <MenuOption link="#thewedding">The Wedding</MenuOption>
           <MenuOption link="#betterTogether">Better Together</MenuOption>
-          <MenuOption link="#whenandwhere">When &amp; Where</MenuOption>
           <MenuOption link="#registry">Registry</MenuOption>   
         </Menu>
       </Header>
