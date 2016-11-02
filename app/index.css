@@ -44,44 +44,31 @@ html, body, #app {
 
 .wedding_header {
   background-color: white;
-  border-bottom: 1px solid #cecece;
   position: fixed;
   z-index: 3;
   width: 100%;
   transition: background-color 0.25s ease-in-out;
 }
 
-.wedding_header:hover, .wedding_header.scrolled {
-  background-color: rgba(255,255,255,1);
-}
-
 .wedding_menu {
+  display: none;
   list-style-type: none;
   text-align: center;
   font-size: 1rem;
 }
 
+.wedding_menu--mobile-show {
+  display: block;
+}
+
 .wedding_menu_item {
-  display: none;
+  display: block;
   padding: 1rem 0;
   font-size: 1.5em;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-}
-
-.wedding_header:hover .wedding_menu_item,
-.wedding_header.scrolled .wedding_menu_item {
-  color: #000;
-  border-bottom: 1px solid white;
-  transition: border-bottom 0.25s ease-in-out;
-}
-
-.wedding_header:hover .wedding_menu_item:hover,
-.wedding_header.scrolled .wedding_menu_item:hover {
-  color: #000;
-  border-bottom: 1px solid #000;
 }
 
 .wedding_pic_section {
@@ -160,11 +147,29 @@ html, body, #app {
 .wedding_mobile-nav {
   padding: 2rem;
   text-align: right;
+  border-bottom: 1px solid #000;
 }
 
 @media (min-width: 664px) {
   .wedding_mobile-nav {
     display:none; 
+  }
+
+  .wedding_header {
+    border-bottom: 1px solid #cecece;
+  }
+
+  .wedding_header:hover .wedding_menu_item,
+  .wedding_header--scrolled .wedding_menu_item {
+    color: #000;
+    border-bottom: 1px solid white;
+    transition: border-bottom 0.25s ease-in-out;
+  }
+
+  .wedding_header:hover .wedding_menu_item:hover,
+  .wedding_header--scrolled .wedding_menu_item:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
   }
 
   .wedding_menu {
@@ -202,6 +207,11 @@ html, body, #app {
 
   .wedding_header {
     background-color: transparent;
+  }
+
+  .wedding_header:hover, 
+  .wedding_header--scrolled {
+    background-color: rgba(255,255,255,1);
   }
 
   .wedding_menu_item {

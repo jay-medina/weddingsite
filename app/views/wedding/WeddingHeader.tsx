@@ -11,20 +11,35 @@ function scrollHandler($el: JQuery) {
               const currentOffset = $el.offset();
 
               if(currentOffset.top >= SCROLL_OFFSET) {
-                $el.addClass('scrolled');
+                $el.addClass('wedding_header--scrolled');
               }
               else {
-                $el.removeClass('scrolled');
+                $el.removeClass('wedding_header--scrolled');
               }
   });
 }
 
-export class WeddingHeader extends React.Component<{},{}> {
+export interface WeddingHeaderState {
+  show?: boolean
+}
+export class WeddingHeader extends React.Component<{},WeddingHeaderState> {
+  constructor(props) {
+    super(props)
+    this.state = { show: false };
+  }
+  onMobileClick() {
+    this.setState({ show: !this.state.show });
+  }
+  getMobileMenuClassName() {
+    if(this.state.show) {
+      return 'wedding_menu--mobile-show';
+    }
+  }
   render() {
     return (
       <Header>
-        <MobileNav />
-        <Menu>
+        <MobileNav onClick={this.onMobileClick.bind(this)}/>
+        <Menu className={this.getMobileMenuClassName()}>
           <MenuOption link="#ourStory" >Our Story</MenuOption>
           <MenuOption link="#thewedding">The Wedding</MenuOption>
           <MenuOption link="#betterTogether">Better Together</MenuOption>

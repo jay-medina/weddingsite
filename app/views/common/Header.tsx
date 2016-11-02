@@ -1,32 +1,51 @@
 import * as React from 'react';
 import Container from './Container';
 
-export interface MenuOptionProps {
+interface MenuOptionProps {
   link: string
 }
 
-export class MenuOption extends React.Component<MenuOptionProps, {}> {
+class MenuOption extends React.Component<MenuOptionProps, {}> {
   render() {
     return <a className="wedding_menu_item" href={this.props.link}>{this.props.children}</a>
   }
 }
-export class Menu extends React.Component<{}, {}> {
+
+interface MenuProps {
+  className?: string
+}
+class Menu extends React.Component<MenuProps, {}> {
   render() {
-    return <Container className="wedding_menu">{this.props.children}</Container>
+    const {className = ''} = this.props;
+    return <Container className={`wedding_menu ${className}`}>{this.props.children}</Container>
   }
 }
 
-export class Header extends React.Component<{}, {}> {
+class Header extends React.Component<{}, {}> {
   render() {
     return <Container className="wedding_header">{this.props.children}</Container>;
   }
 }
 
-export class MobileNav extends React.Component<{}, {}> {
+interface MobileNavProps {
+  onClick?: () => void
+}
+
+class MobileNav extends React.Component<MobileNavProps, {}> {
+  onClick() {
+    this.props.onClick()
+  }
   render() {
     return (
       <Container className="wedding_mobile-nav">
-        <button className={'hamburger'}></button>
+        <button className={'hamburger'} onClick={this.onClick.bind(this)}></button>
       </Container>);
   }
 }
+
+export {
+  MobileNav, MobileNavProps,
+  Header,
+  Menu,
+  MenuOption, MenuOptionProps
+};
