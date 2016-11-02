@@ -21621,22 +21621,31 @@
 	        .on('scroll', function () {
 	        var currentOffset = $el.offset();
 	        if (currentOffset.top >= SCROLL_OFFSET) {
-	            $el.addClass('scrolled');
+	            $el.addClass('wedding_header--scrolled');
 	        }
 	        else {
-	            $el.removeClass('scrolled');
+	            $el.removeClass('wedding_header--scrolled');
 	        }
 	    });
 	}
 	var WeddingHeader = (function (_super) {
 	    __extends(WeddingHeader, _super);
-	    function WeddingHeader() {
-	        _super.apply(this, arguments);
+	    function WeddingHeader(props) {
+	        _super.call(this, props);
+	        this.state = { show: false };
 	    }
+	    WeddingHeader.prototype.onMobileClick = function () {
+	        this.setState({ show: !this.state.show });
+	    };
+	    WeddingHeader.prototype.getMobileMenuClassName = function () {
+	        if (this.state.show) {
+	            return 'wedding_menu--mobile-show';
+	        }
+	    };
 	    WeddingHeader.prototype.render = function () {
 	        return (React.createElement(Header_1.Header, null, 
-	            React.createElement(Header_1.MobileNav, null), 
-	            React.createElement(Header_1.Menu, null, 
+	            React.createElement(Header_1.MobileNav, {onClick: this.onMobileClick.bind(this)}), 
+	            React.createElement(Header_1.Menu, {className: this.getMobileMenuClassName()}, 
 	                React.createElement(Header_1.MenuOption, {link: "#ourStory"}, "Our Story"), 
 	                React.createElement(Header_1.MenuOption, {link: "#thewedding"}, "The Wedding"), 
 	                React.createElement(Header_1.MenuOption, {link: "#betterTogether"}, "Better Together"), 
@@ -31906,7 +31915,8 @@
 	        _super.apply(this, arguments);
 	    }
 	    Menu.prototype.render = function () {
-	        return React.createElement(Container_1.default, {className: "wedding_menu"}, this.props.children);
+	        var _a = this.props.className, className = _a === void 0 ? '' : _a;
+	        return React.createElement(Container_1.default, {className: "wedding_menu " + className}, this.props.children);
 	    };
 	    return Menu;
 	}(React.Component));
@@ -31927,9 +31937,12 @@
 	    function MobileNav() {
 	        _super.apply(this, arguments);
 	    }
+	    MobileNav.prototype.onClick = function () {
+	        this.props.onClick();
+	    };
 	    MobileNav.prototype.render = function () {
 	        return (React.createElement(Container_1.default, {className: "wedding_mobile-nav"}, 
-	            React.createElement("button", {className: 'hamburger'})
+	            React.createElement("button", {className: 'hamburger', onClick: this.onClick.bind(this)})
 	        ));
 	    };
 	    return MobileNav;
@@ -32026,7 +32039,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'Open Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(189) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.title {\n  font-family: 'Tangerine', cursive;\n}\n\n.wedding_header {\n  background-color: white;\n  border-bottom: 1px solid #cecece;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_header:hover, .wedding_header.scrolled {\n  background-color: rgba(255,255,255,1);\n}\n\n.wedding_menu {\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu_item {\n  display: none;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_header:hover .wedding_menu_item,\n.wedding_header.scrolled .wedding_menu_item {\n  color: #000;\n  border-bottom: 1px solid white;\n  transition: border-bottom 0.25s ease-in-out;\n}\n\n.wedding_header:hover .wedding_menu_item:hover,\n.wedding_header.scrolled .wedding_menu_item:hover {\n  color: #000;\n  border-bottom: 1px solid #000;\n}\n\n.wedding_pic_section {\n  background: #29B6F6;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: 0 60%;\n  background-image: url(" + __webpack_require__(178) + ");\n  position: static;\n  min-height: 720px;\n  min-height: 95vh;\n  overflow: hidden;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_bestFriends {\n  padding: 20rem 0;\n  background-position: top center;\n  background-size: cover;\n  background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);\n}\n\n.wedding_text_section {\n  padding: 6rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n}", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'Open Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(189) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.title {\n  font-family: 'Tangerine', cursive;\n}\n\n.wedding_header {\n  background-color: white;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_menu {\n  display: none;\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu--mobile-show {\n  display: block;\n}\n\n.wedding_menu_item {\n  display: block;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_pic_section {\n  background: #29B6F6;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: 0 60%;\n  background-image: url(" + __webpack_require__(178) + ");\n  position: static;\n  min-height: 720px;\n  min-height: 95vh;\n  overflow: hidden;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_bestFriends {\n  padding: 20rem 0;\n  background-position: top center;\n  background-size: cover;\n  background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);\n}\n\n.wedding_text_section {\n  padding: 6rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n  border-bottom: 1px solid #000;\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_header {\n    border-bottom: 1px solid #cecece;\n  }\n\n  .wedding_header:hover .wedding_menu_item,\n  .wedding_header--scrolled .wedding_menu_item {\n    color: #000;\n    border-bottom: 1px solid white;\n    transition: border-bottom 0.25s ease-in-out;\n  }\n\n  .wedding_header:hover .wedding_menu_item:hover,\n  .wedding_header--scrolled .wedding_menu_item:hover {\n    color: #000;\n    border-bottom: 1px solid #000;\n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_header:hover, \n  .wedding_header--scrolled {\n    background-color: rgba(255,255,255,1);\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n}", ""]);
 
 	// exports
 
