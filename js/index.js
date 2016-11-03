@@ -21637,6 +21637,9 @@
 	    WeddingHeader.prototype.onMobileClick = function () {
 	        this.setState({ show: !this.state.show });
 	    };
+	    WeddingHeader.prototype.onMenuItemClick = function () {
+	        this.setState({ show: false });
+	    };
 	    WeddingHeader.prototype.getMobileMenuClassName = function () {
 	        if (this.state.show) {
 	            return 'wedding_menu--mobile-show';
@@ -21645,7 +21648,7 @@
 	    WeddingHeader.prototype.render = function () {
 	        return (React.createElement(Header_1.Header, null, 
 	            React.createElement(Header_1.MobileNav, {onClick: this.onMobileClick.bind(this)}), 
-	            React.createElement(Header_1.Menu, {className: this.getMobileMenuClassName()}, 
+	            React.createElement(Header_1.Menu, {className: this.getMobileMenuClassName(), onClick: this.onMenuItemClick.bind(this)}, 
 	                React.createElement(Header_1.MenuOption, {link: "#ourStory"}, "Our Story"), 
 	                React.createElement(Header_1.MenuOption, {link: "#thewedding"}, "The Wedding"), 
 	                React.createElement(Header_1.MenuOption, {link: "#betterTogether"}, "Better Together"), 
@@ -31914,9 +31917,12 @@
 	    function Menu() {
 	        _super.apply(this, arguments);
 	    }
+	    Menu.prototype.onClick = function () {
+	        this.props.onClick();
+	    };
 	    Menu.prototype.render = function () {
 	        var _a = this.props.className, className = _a === void 0 ? '' : _a;
-	        return React.createElement(Container_1.default, {className: "wedding_menu " + className}, this.props.children);
+	        return React.createElement(Container_1.default, {className: "wedding_menu " + className, onClick: this.onClick.bind(this)}, this.props.children);
 	    };
 	    return Menu;
 	}(React.Component));
