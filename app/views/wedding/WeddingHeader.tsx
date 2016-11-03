@@ -30,6 +30,9 @@ export class WeddingHeader extends React.Component<{},WeddingHeaderState> {
   onMobileClick() {
     this.setState({ show: !this.state.show });
   }
+  onMenuItemClick() {
+    this.setState({ show: false });
+  }
   getMobileMenuClassName() {
     if(this.state.show) {
       return 'wedding_menu--mobile-show';
@@ -39,7 +42,7 @@ export class WeddingHeader extends React.Component<{},WeddingHeaderState> {
     return (
       <Header>
         <MobileNav onClick={this.onMobileClick.bind(this)}/>
-        <Menu className={this.getMobileMenuClassName()}>
+        <Menu className={this.getMobileMenuClassName()} onClick={this.onMenuItemClick.bind(this)}>
           <MenuOption link="#ourStory" >Our Story</MenuOption>
           <MenuOption link="#thewedding">The Wedding</MenuOption>
           <MenuOption link="#betterTogether">Better Together</MenuOption>

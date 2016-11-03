@@ -2,6 +2,7 @@ import * as React from 'react';
 
 interface IContainer {
   className?: string,
+  onClick?: () => void,
   id?: string
 }
 

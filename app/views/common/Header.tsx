@@ -7,17 +7,23 @@ interface MenuOptionProps {
 
 class MenuOption extends React.Component<MenuOptionProps, {}> {
   render() {
-    return <a className="wedding_menu_item" href={this.props.link}>{this.props.children}</a>
+    return <a className="wedding_menu_item" 
+              href={this.props.link}>{this.props.children}</a>
   }
 }
 
 interface MenuProps {
-  className?: string
+  className?: string,
+  onClick: () => void
 }
+
 class Menu extends React.Component<MenuProps, {}> {
+  onClick() {
+    this.props.onClick();
+  }
   render() {
     const {className = ''} = this.props;
-    return <Container className={`wedding_menu ${className}`}>{this.props.children}</Container>
+    return <Container className={`wedding_menu ${className}`} onClick={this.onClick.bind(this)}>{this.props.children}</Container>
   }
 }
 
