@@ -3,7 +3,10 @@ const plugins = require('./buildFiles/plugins.js');
 
 module.exports = {
   entry: {
-    index: './app/index.tsx'
+    index: './app/index.tsx',
+    registry: './app/registry.tsx',
+    ourtravels: './app/ourtravels.tsx',
+    hotelinformation: './app/hotelinformation.tsx'
   },
   output: {
     path: 'dist/',
