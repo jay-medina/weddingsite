@@ -72,7 +72,7 @@ html, body, #app {
   border-bottom: 1px solid transparent;
 }
 
-.wedding_pic_section {
+.wedding_coverpage {
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
@@ -85,8 +85,8 @@ html, body, #app {
 }
 
 .wedding_ourStory {
-  background-position: 0 60%;
-  background-image: url('./images/pic3.jpg');
+  background-position: 0 50%;
+  background-image: url('./images/ourtravels/pic4.jpg');
   min-height: 720px;
   min-height: 95vh;
 }
@@ -111,11 +111,19 @@ html, body, #app {
   top: 10px;
 }
 
-.wedding_bestFriends {
+.wedding_ourTravels {
   padding: 20rem 0;
-  background-position: top center;
-  background-size: cover;
-  background-image: url(https://static1.squarespace.com/static/53d7e714e4b0cb1125a8185a/t/53dbd942e4b007719c89284d/1406916932953/img_0436-darkened.jpg?format=2500w);
+  background-image: url('./images/ourtravels/pic8.jpg');
+}
+
+.wedding_hotelInfo {
+  padding: 20rem 0;
+  background-image: url('http://www.surfandsunshine.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-14-at-12.38.36-PM.png');
+}
+
+.wedding_registry {
+  padding: 20rem 0;
+  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');
 }
 
 .wedding_text_section {
@@ -236,7 +244,7 @@ html, body, #app {
     z-index: 0;
   }
   .wedding_sectionTitle {
-    font-size: 12rem;
+    font-size: 8rem;
   }
 
   .wedding_title--hotel-info {

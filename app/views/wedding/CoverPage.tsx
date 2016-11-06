@@ -12,7 +12,7 @@ export default class CoverPage extends React.Component<CoverPageProps, {}> {
     const {className} = this.props || '';
     return (
       <Container>
-        <Section className={`wedding_pic_section ${className}`}>
+        <Section className={`wedding_coverpage ${className}`}>
           <Overlay />
           { this.props.children }
         </Section>

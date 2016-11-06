@@ -9,7 +9,7 @@ import './index.css';
 ReactDOM.render(
   <Container>
       <WeddingHeader />
-      <CoverPage className="wedding_bestFriends">
+      <CoverPage className="wedding_registry">
         <SectionTitle>Registry</SectionTitle>
       </CoverPage>
       <Section className="wedding_text_section">
