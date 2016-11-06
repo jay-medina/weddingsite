@@ -22,7 +22,7 @@ function scrollHandler($el: JQuery) {
 export interface WeddingHeaderState {
   show?: boolean
 }
-export class WeddingHeader extends React.Component<{},WeddingHeaderState> {
+export default class WeddingHeader extends React.Component<{},WeddingHeaderState> {
   constructor(props) {
     super(props)
     this.state = { show: false };

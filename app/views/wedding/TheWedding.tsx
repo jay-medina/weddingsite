@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {Section, SectionBody, SectionTitle} from '../common/Section';
 import Overlay from '../common/Overlay';
+import CoverPage from './CoverPage';
 
 export default function TheWedding() {
   return (
     <div>
-      <Section className="wedding_pic_section wedding_ourStory">
-        <Overlay />
+      <CoverPage className="wedding_ourStory">
         <SectionBody className="wedding_ourStory--body">
             <div className="wedding_ourStory--body-name title">
             Mercedes <br />
@@ -18,7 +18,7 @@ export default function TheWedding() {
             11/4/2017
             </div>
         </SectionBody >
-      </Section>
+      </CoverPage>
       <Section className="wedding_text_section">
         <SectionTitle>Our Story</SectionTitle>
         <SectionBody>
