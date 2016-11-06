@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Section, SectionBody, SectionTitle} from '../common/Section';
 import Overlay from '../common/Overlay';
 
-export function OurStory() {
+export default function TheWedding() {
   return (
     <div>
       <Section className="wedding_pic_section wedding_ourStory">
