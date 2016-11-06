@@ -4,7 +4,7 @@ import {Section, SectionTitle, SectionBody} from '../common/Section';
 
 export function WhenAndWhere() {
   return (
-    <Container id="thewedding">
+    <Container>
       <Section className="wedding_savethedate--background">
         <img className="wedding_savethedate" src="images/savethedate.jpg" />
       </Section>

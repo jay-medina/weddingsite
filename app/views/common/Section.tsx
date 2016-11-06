@@ -4,8 +4,7 @@ import Container from './Container';
 const images = require('../../images/images');
 
 export interface SectionProps {
-  className? : string,
-  id? : string
+  className? : string
 }
 
 export class SectionTitle extends React.Component<{}, {}> {
@@ -28,10 +27,10 @@ export class SectionBody extends React.Component<SectionProps, {}> {
 
 export class Section extends React.Component<SectionProps, {}> {
   render() {
-    const {id = '', className = ''} = this.props;
+    const {className = ''} = this.props;
 
     return (
-      <div id={id} className='section-wrapper'>
+      <div className='section-wrapper'>
         <div className={`align-center ${className}`}>
           {this.props.children}
         </div>

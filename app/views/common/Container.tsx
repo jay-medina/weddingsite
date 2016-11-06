@@ -2,8 +2,7 @@ import * as React from 'react';
 
 interface IContainer {
   className?: string,
-  onClick?: () => void,
-  id?: string
+  onClick?: () => void
 }
 
 class Container extends React.Component<IContainer, {}>{
