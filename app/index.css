@@ -6,7 +6,7 @@ a {
 }
 html, body, #app {
   font-size: 12px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   background-color: #FFFFFF;
   margin: 0;
   color: #000000;
@@ -39,7 +39,8 @@ html, body, #app {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .title {
-  font-family: 'Tangerine', cursive;
+  font-family: 'Satisfy', cursive;
+  
 }
 
 .wedding_header {
@@ -120,7 +121,7 @@ html, body, #app {
 }
 
 .wedding_text_section {
-  padding: 6rem 0 8rem;
+  padding: 3rem 0 8rem;
   margin: 0 auto;
   width: 75%;
   font-size: 1.25rem;
@@ -148,6 +149,17 @@ html, body, #app {
   padding: 2rem;
   text-align: right;
   border-bottom: 1px solid #000;
+}
+
+.wedding_savethedate {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wedding_savethedate--background {
+  padding: 5.5rem 0;
+  background-size: 650px;
 }
 
 @media (min-width: 664px) {
@@ -222,5 +234,8 @@ html, body, #app {
     padding: 10rem 0 20rem 5%;
     position: fixed;
     z-index: 0;
+  }
+  .wedding_sectionTitle {
+    font-size: 12rem;
   }
 }

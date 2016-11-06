@@ -43,10 +43,10 @@ export class WeddingHeader extends React.Component<{},WeddingHeaderState> {
       <Header>
         <MobileNav onClick={this.onMobileClick.bind(this)}/>
         <Menu className={this.getMobileMenuClassName()} onClick={this.onMenuItemClick.bind(this)}>
-          <MenuOption link="#ourStory" >Our Story</MenuOption>
-          <MenuOption link="#thewedding">The Wedding</MenuOption>
-          <MenuOption link="#betterTogether">Better Together</MenuOption>
-          <MenuOption link="#registry">Registry</MenuOption>   
+          <MenuOption link="#/" >The Wedding</MenuOption>
+          <MenuOption link="/ourtravels">Our Travels</MenuOption>
+          <MenuOption link="/hotel">Hotel Information</MenuOption>
+          <MenuOption link="/registry">Registry</MenuOption>   
         </Menu>
       </Header>
     );

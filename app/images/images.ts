@@ -1,3 +1,4 @@
+import './savethedate.jpg';
 
 module.exports = [ 
   require('./pic1.jpg'),

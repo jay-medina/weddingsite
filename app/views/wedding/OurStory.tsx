@@ -14,7 +14,7 @@ export function OurStory() {
             Jose <br />
             </div>
             <div className="wedding_ourStory--body-date">
-            ~ Are Tieing the Knot ~ <br />
+            ~ Are Tying the Knot ~ <br />
             11/4/2017
             </div>
         </SectionBody >
