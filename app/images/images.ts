@@ -1,5 +1,5 @@
 import './savethedate.jpg';
-console.log('hi');
+
 module.exports = [ 
   require('./pic1.jpg'),
   require('./pic2.jpg'),
