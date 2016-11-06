@@ -48,14 +48,18 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(34);
 	var Container_1 = __webpack_require__(172);
-	var TheWedding_1 = __webpack_require__(195);
 	var WeddingHeader_1 = __webpack_require__(187);
-	var WhenAndWhere_1 = __webpack_require__(196);
+	var CoverPage_1 = __webpack_require__(173);
+	var Section_1 = __webpack_require__(175);
 	__webpack_require__(190);
 	ReactDOM.render(React.createElement(Container_1.default, null, 
 	    React.createElement(WeddingHeader_1.default, null), 
-	    React.createElement(TheWedding_1.default, null), 
-	    React.createElement(WhenAndWhere_1.WhenAndWhere, null)), document.getElementById('app'));
+	    React.createElement(CoverPage_1.default, {className: "wedding_ourTravels"}, 
+	        React.createElement(Section_1.SectionTitle, {className: "wedding_title--our-travels"}, "Our Travels")
+	    ), 
+	    React.createElement(Section_1.Section, {className: "wedding_sectionPicBody"}, 
+	        React.createElement(Section_1.SectionPictureBody, null)
+	    )), document.getElementById('app'));
 
 
 /***/ },
@@ -32356,55 +32360,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var React = __webpack_require__(1);
-	var Section_1 = __webpack_require__(175);
-	var CoverPage_1 = __webpack_require__(173);
-	function TheWedding() {
-	    return (React.createElement("div", null, 
-	        React.createElement(CoverPage_1.default, {className: "wedding_ourStory"}, 
-	            React.createElement(Section_1.SectionBody, {className: "wedding_ourStory--body"}, 
-	                React.createElement("div", {className: "wedding_ourStory--body-name title"}, 
-	                    "Mercedes ", 
-	                    React.createElement("br", null), 
-	                    React.createElement("div", {className: "wedding_ourStory--body-amp"}, "&"), 
-	                    "Jose ", 
-	                    React.createElement("br", null)), 
-	                React.createElement("div", {className: "wedding_ourStory--body-date"}, 
-	                    "~ Are Tying the Knot ~ ", 
-	                    React.createElement("br", null), 
-	                    "11/4/2017"))
-	        ), 
-	        React.createElement(Section_1.Section, {className: "wedding_text_section"}, 
-	            React.createElement(Section_1.SectionTitle, null, "Our Story"), 
-	            React.createElement(Section_1.SectionBody, null, "Our mutual friends Kylla and Miki set us up originally," + ' ' + "thinking we'd be perfect for each other. After our first date," + ' ' + "we both decided we weren't interested! But several months later" + ' ' + "we happened to go on the same group camping trip, and saw each other in a" + ' ' + "new light. We fell in love. And we can't wait to spend the rest of our" + ' ' + "lives together."))));
-	}
-	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.default = TheWedding;
-
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var React = __webpack_require__(1);
-	var Container_1 = __webpack_require__(172);
-	var Section_1 = __webpack_require__(175);
-	function WhenAndWhere() {
-	    return (React.createElement(Container_1.default, null, 
-	        React.createElement(Section_1.Section, {className: "wedding_savethedate--background"}, 
-	            React.createElement("img", {className: "wedding_savethedate", src: "images/savethedate.jpg"})
-	        )
-	    ));
-	}
-	exports.WhenAndWhere = WhenAndWhere;
 
 
 /***/ }
