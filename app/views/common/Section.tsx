@@ -7,10 +7,11 @@ export interface SectionProps {
   className? : string
 }
 
-export class SectionTitle extends React.Component<{}, {}> {
+export class SectionTitle extends React.Component<SectionProps, {}> {
   render() {
+    const { className } = this.props || ''; 
     return (
-      <div className="wedding_sectionTitle title">{this.props.children}</div>
+      <div className={"wedding_sectionTitle title " + className}>{this.props.children}</div>
     )
   }
 }

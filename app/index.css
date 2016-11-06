@@ -73,7 +73,9 @@ html, body, #app {
 }
 
 .wedding_pic_section {
-  background: #29B6F6;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
   color: #FFF;
   font-size: 5rem;
   background-position: center center;
@@ -83,14 +85,10 @@ html, body, #app {
 }
 
 .wedding_ourStory {
-  background-attachment: fixed;
-  background-size: cover;
   background-position: 0 60%;
   background-image: url('./images/pic3.jpg');
-  position: static;
   min-height: 720px;
   min-height: 95vh;
-  overflow: hidden;
 }
 
 .wedding_ourStory--body {
@@ -131,6 +129,7 @@ html, body, #app {
   font-weight: 400;
   font-size: 8rem;
   padding: 1rem;
+  position: relative;
 }
 
 .wedding_sectionPicBody {
@@ -238,5 +237,9 @@ html, body, #app {
   }
   .wedding_sectionTitle {
     font-size: 12rem;
+  }
+
+  .wedding_title--hotel-info {
+    font-size: 8rem;
   }
 }

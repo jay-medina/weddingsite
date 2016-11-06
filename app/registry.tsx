@@ -9,8 +9,9 @@ import './index.css';
 ReactDOM.render(
   <Container>
       <WeddingHeader />
-      <CoverPage className="wedding_bestFriends" />
-      <Section className="wedding_pic_section wedding_bestFriends"> Registry </Section>
+      <CoverPage className="wedding_bestFriends">
+        <SectionTitle>Registry</SectionTitle>
+      </CoverPage>
       <Section className="wedding_text_section">
         <SectionTitle>Registry</SectionTitle>
         <SectionBody>

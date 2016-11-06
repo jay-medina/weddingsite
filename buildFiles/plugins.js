@@ -32,19 +32,19 @@ function getPlugins() {
     }),
     new HtmlWebpackPlugin({
       title: 'M&amp;JFiesta2Forever',
-      filename: 'hotelinformation.html',
+      filename: 'hotel/index.html',
       chunks: ['hotelinformation'],
       template: 'buildFiles/template.ejs'
     }),
     new HtmlWebpackPlugin({
       title: 'M&amp;JFiesta2Forever',
-      filename: 'registry.html',
+      filename: 'registry/index.html',
       chunks: ['registry'],
       template: 'buildFiles/template.ejs'
     }),
     new HtmlWebpackPlugin({
       title: 'M&amp;JFiesta2Forever',
-      filename: 'ourtravels.html',
+      filename: 'ourtravels/index.html',
       chunks: ['ourtravels'],
       template: 'buildFiles/template.ejs'
     })
