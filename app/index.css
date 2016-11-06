@@ -86,7 +86,7 @@ html, body, #app {
 
 .wedding_ourStory {
   background-position: 0 50%;
-  background-image: url('./images/ourtravels/pic4.jpg');
+  background-image: url('./images/pic4.jpg');
   min-height: 720px;
   min-height: 95vh;
 }
@@ -113,7 +113,7 @@ html, body, #app {
 
 .wedding_ourTravels {
   padding: 20rem 0;
-  background-image: url('./images/ourtravels/pic8.jpg');
+  background-image: url('./images/pic8.jpg');
 }
 
 .wedding_hotelInfo {
