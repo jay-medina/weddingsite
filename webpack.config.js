@@ -10,6 +10,7 @@ module.exports = {
   },
   output: {
     path: 'dist/',
+    publicPath: 'http://mjfiesta2forever.com/',
     filename: 'js/[name].js'
   },
   resolve: {
@@ -31,7 +32,7 @@ module.exports = {
         },
         {
           test: /\.(jpg|png)$/,
-          loader: 'file?name=images/[name].[ext]'
+          loader: 'file?name=./images/[name].[ext]'
         }
       ]
   },
