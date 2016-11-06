@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "http://mjfiesta2forever.com/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -21594,61 +21594,61 @@
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/savethedate.jpg";
+	module.exports = __webpack_require__.p + "./images/savethedate.jpg";
 
 /***/ },
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic1.jpg";
+	module.exports = __webpack_require__.p + "./images/pic1.jpg";
 
 /***/ },
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic2.jpg";
+	module.exports = __webpack_require__.p + "./images/pic2.jpg";
 
 /***/ },
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic3.jpg";
+	module.exports = __webpack_require__.p + "./images/pic3.jpg";
 
 /***/ },
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic4.jpg";
+	module.exports = __webpack_require__.p + "./images/pic4.jpg";
 
 /***/ },
 /* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic5.jpg";
+	module.exports = __webpack_require__.p + "./images/pic5.jpg";
 
 /***/ },
 /* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic6.jpg";
+	module.exports = __webpack_require__.p + "./images/pic6.jpg";
 
 /***/ },
 /* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic7.jpg";
+	module.exports = __webpack_require__.p + "./images/pic7.jpg";
 
 /***/ },
 /* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic8.jpg";
+	module.exports = __webpack_require__.p + "./images/pic8.jpg";
 
 /***/ },
 /* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/pic9.jpg";
+	module.exports = __webpack_require__.p + "./images/pic9.jpg";
 
 /***/ },
 /* 187 */
@@ -32105,7 +32105,7 @@
 /* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "images/hamburger_icon.png";
+	module.exports = __webpack_require__.p + "./images/hamburger_icon.png";
 
 /***/ },
 /* 194 */
