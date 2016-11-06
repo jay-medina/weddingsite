@@ -9,4 +9,5 @@ module.exports = [
   require('./ourtravels/pic6.jpg'),
   require('./ourtravels/pic7.jpg'),
   require('./ourtravels/pic8.jpg'),
+  require('./ourtravels/pic9.jpg'),
 ];

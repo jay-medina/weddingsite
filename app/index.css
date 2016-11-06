@@ -150,6 +150,7 @@ html, body, #app {
 .wedding_sectionImg {
   width: 95%;
   margin: 0.5rem 0;
+  vertical-align: top;
 }
 
 .wedding_mobile-nav {
