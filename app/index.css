@@ -113,7 +113,7 @@ html, body, #app {
 
 .wedding_ourTravels {
   padding: 20rem 0;
-  background-image: url('./images/pic8.jpg');
+  background-image: url('./images/pic9.jpg');
 }
 
 .wedding_hotelInfo {
@@ -204,6 +204,9 @@ html, body, #app {
     display:inline;
     margin: 0 2rem;
   }
+  .wedding_ourTravels {
+    background-position: 0 -10rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -250,5 +253,8 @@ html, body, #app {
 
   .wedding_title--hotel-info {
     font-size: 8rem;
+  }
+  .wedding_ourTravels {
+    background-position: 0 -15rem;
   }
 }
