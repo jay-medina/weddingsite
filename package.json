@@ -5,7 +5,7 @@
   "main": "app/index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rm -rf dist && webpack",
+    "build": "rm -rf dist && webpack --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

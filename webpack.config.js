@@ -1,6 +1,11 @@
 const path = require('path');
 const plugins = require('./buildFiles/plugins.js');
 
+function forProduction() {
+  const argv = process.argv;
+  return argv.length > 2 && argv[2] === '--production';
+}
+
 module.exports = {
   entry: {
     index: './app/index.tsx',
@@ -10,7 +15,7 @@ module.exports = {
   },
   output: {
     path: 'dist/',
-    publicPath: 'http://mjfiesta2forever.com/',
+    publicPath: (forProduction()) ? 'http://mjfiesta2forever.com/': '',
     filename: 'js/[name].js'
   },
   resolve: {
