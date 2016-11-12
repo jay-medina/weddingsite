@@ -1,6 +1,7 @@
 import './savethedate.jpg';
+import './flowers_without_bg.png';
 
-console.log('hi');
+
 module.exports = [ 
   require('./pic1.jpg'),
   require('./pic2.jpg'),

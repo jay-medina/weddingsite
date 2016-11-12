@@ -22,12 +22,12 @@ export default function TheWedding() {
       <Section className="wedding_text_section">
         <SectionTitle>Our Story</SectionTitle>
         <SectionBody>
-            Our mutual friends Kylla and Miki set us up originally,
-            thinking we'd be perfect for each other. After our first date,
-            we both decided we weren't interested! But several months later
-            we happened to go on the same group camping trip, and saw each other in a
-            new light. We fell in love. And we can't wait to spend the rest of our
-            lives together.
+            After first meeting in college, Jose and Mercedes didn’t reconnect again until attending a welcome home celebration for a mutual friend.
+            That night, Jose asked Mercedes out on a date (which freaked Mercedes out), but after giving it some thought, she said the first YES.
+            Jose and Mercedes started dating long distance, with Jose living in Philadelphia and Mercedes living in NYC.
+            Eventually Jose moved to NYC, (he said it was because he always wanted to live in NYC, but we all know it was really for Mercedes!) and after a few months, they both said YES to living together.
+            Fast forward to November 23, 2015 when Jose popped the big question and Mercedes said the YES that brought you here.
+            Now it’s time to celebrate their love as they say I Do in Puerto Vallarta, Mexico!
         </SectionBody>
       </Section>
     </div>
