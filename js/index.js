@@ -48,10 +48,10 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(30);
 	var Container_1 = __webpack_require__(163);
-	var TheWedding_1 = __webpack_require__(189);
-	var WeddingHeader_1 = __webpack_require__(181);
-	var WhenAndWhere_1 = __webpack_require__(190);
-	__webpack_require__(184);
+	var TheWedding_1 = __webpack_require__(190);
+	var WeddingHeader_1 = __webpack_require__(182);
+	var WhenAndWhere_1 = __webpack_require__(191);
+	__webpack_require__(185);
 	ReactDOM.render(React.createElement(Container_1.default, null, 
 	    React.createElement(WeddingHeader_1.default, null), 
 	    React.createElement(TheWedding_1.default, null), 
@@ -20499,7 +20499,7 @@
 	        var className = (this.props || '').className;
 	        return (React.createElement(Container_1.default, null, 
 	            React.createElement(Section_1.Section, {className: "wedding_coverpage " + className}, 
-	                React.createElement(Overlay_1.default, null), 
+	                React.createElement(Overlay_1.default, {always: this.props.showOverlay}), 
 	                this.props.children)
 	        ));
 	    };
@@ -20515,8 +20515,14 @@
 
 	"use strict";
 	var React = __webpack_require__(1);
-	function Overlay() {
-	    return (React.createElement("div", {className: "overlay"}));
+	function Overlay(props) {
+	    function displayAlways() {
+	        if (props.always) {
+	            return 'overlay--always';
+	        }
+	        return '';
+	    }
+	    return (React.createElement("div", {className: 'overlay ' + displayAlways()}));
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Overlay;
@@ -20594,9 +20600,8 @@
 
 	"use strict";
 	__webpack_require__(168);
-	console.log('hi');
+	__webpack_require__(169);
 	module.exports = [
-	    __webpack_require__(169),
 	    __webpack_require__(170),
 	    __webpack_require__(171),
 	    __webpack_require__(172),
@@ -20608,6 +20613,7 @@
 	    __webpack_require__(178),
 	    __webpack_require__(179),
 	    __webpack_require__(180),
+	    __webpack_require__(181),
 	];
 
 
@@ -20621,76 +20627,82 @@
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic1.jpg";
+	module.exports = __webpack_require__.p + "./images/flowers_without_bg.png";
 
 /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic2.jpg";
+	module.exports = __webpack_require__.p + "./images/pic1.jpg";
 
 /***/ },
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic3.jpg";
+	module.exports = __webpack_require__.p + "./images/pic2.jpg";
 
 /***/ },
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic4.jpg";
+	module.exports = __webpack_require__.p + "./images/pic3.jpg";
 
 /***/ },
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic5.jpg";
+	module.exports = __webpack_require__.p + "./images/pic4.jpg";
 
 /***/ },
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic6.jpg";
+	module.exports = __webpack_require__.p + "./images/pic5.jpg";
 
 /***/ },
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic7.jpg";
+	module.exports = __webpack_require__.p + "./images/pic6.jpg";
 
 /***/ },
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic8.jpg";
+	module.exports = __webpack_require__.p + "./images/pic7.jpg";
 
 /***/ },
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic9.jpg";
+	module.exports = __webpack_require__.p + "./images/pic8.jpg";
 
 /***/ },
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic10.jpg";
+	module.exports = __webpack_require__.p + "./images/pic9.jpg";
 
 /***/ },
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic11.jpg";
+	module.exports = __webpack_require__.p + "./images/pic10.jpg";
 
 /***/ },
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic12.jpg";
+	module.exports = __webpack_require__.p + "./images/pic11.jpg";
 
 /***/ },
 /* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/pic12.jpg";
+
+/***/ },
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -20700,8 +20712,8 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var $ = __webpack_require__(182);
-	var Header_1 = __webpack_require__(183);
+	var $ = __webpack_require__(183);
+	var Header_1 = __webpack_require__(184);
 	var SCROLL_OFFSET = 250;
 	function scrollHandler($el) {
 	    $(window).off('scroll')
@@ -20752,7 +20764,7 @@
 
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -30978,7 +30990,7 @@
 
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31045,16 +31057,16 @@
 
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(185);
+	var content = __webpack_require__(186);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(188)(content, {});
+	var update = __webpack_require__(189)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31071,21 +31083,21 @@
 	}
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(186)();
+	exports = module.exports = __webpack_require__(187)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'PT Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(187) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.title {\n  font-family: 'Satisfy', cursive;\n  \n}\n\n.wedding_header {\n  background-color: white;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_menu {\n  display: none;\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu--mobile-show {\n  display: block;\n}\n\n.wedding_menu_item {\n  display: block;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_coverpage {\n  background-attachment: fixed;\n  background-size: cover;\n  overflow: hidden;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-position: 0 50%;\n  background-image: url(" + __webpack_require__(172) + ");\n  min-height: 720px;\n  min-height: 95vh;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_ourTravels {\n  padding: 20rem 0;\n  background-image: url(" + __webpack_require__(177) + ");\n}\n\n.wedding_hotelInfo {\n  padding: 20rem 0;\n  background-image: url('http://www.surfandsunshine.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-14-at-12.38.36-PM.png');\n}\n\n.wedding_registry {\n  padding: 20rem 0;\n  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');\n}\n\n.wedding_text_section {\n  padding: 3rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n  position: relative;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n  vertical-align: top;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n  border-bottom: 1px solid #000;\n}\n\n.wedding_savethedate {\n  display: block;\n  max-width: 100%;\n  margin: 0 auto;\n}\n\n.wedding_savethedate--background {\n  padding: 5.5rem 0;\n  background-size: 650px;\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_header--scrolled {\n    border-bottom: 1px solid #cecece;\n  }\n\n  .wedding_header:hover .wedding_menu_item,\n  .wedding_header--scrolled .wedding_menu_item {\n    color: #000;\n    border-bottom: 1px solid white;\n    transition: border-bottom 0.25s ease-in-out;\n  }\n\n  .wedding_header:hover .wedding_menu_item:hover,\n  .wedding_header--scrolled .wedding_menu_item:hover {\n    color: #000;\n    border-bottom: 1px solid #000;\n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n    background-color: rgba(255,255,255,0.4);\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -10rem;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_header:hover, \n  .wedding_header--scrolled {\n    background-color: rgba(255,255,255,1);\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n  .wedding_sectionTitle {\n    font-size: 8rem;\n  }\n\n  .wedding_title--hotel-info {\n    font-size: 8rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -15rem;\n  }\n}", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'PT Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(188) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.2);\n}\n\n.title {\n  font-family: 'Satisfy', cursive;\n  \n}\n\n.wedding_header {\n  background-color: white;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_menu {\n  display: none;\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu--mobile-show {\n  display: block;\n}\n\n.wedding_menu_item {\n  display: block;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_coverpage {\n  background-attachment: fixed;\n  background-size: cover;\n  overflow: hidden;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-position: 0 50%;\n  background-image: url(" + __webpack_require__(173) + ");\n  min-height: 720px;\n  min-height: 95vh;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_ourTravels {\n  padding: 20rem 0;\n  background-image: url(" + __webpack_require__(178) + ");\n}\n\n.wedding_hotelInfo {\n  padding: 20rem 0;\n  background-image: url('http://www.surfandsunshine.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-14-at-12.38.36-PM.png');\n}\n\n.wedding_registry {\n  padding: 20rem 0;\n  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');\n}\n\n.wedding_text_section {\n  padding: 6rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n  position: relative;\n}\n\n.wedding_sectionBody {\n  font-size: 1.5rem;\n  line-height: 2.5rem;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n  vertical-align: top;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n  border-bottom: 1px solid #000;\n}\n\n.wedding_savethedate {\n  display: block;\n  max-width: 100%;\n  margin: 0 auto;\n}\n\n.wedding_flowers--container {\n  position:relative;\n  display:none;\n}\n\n.wedding_flowers {\n  position:absolute;\n  width:50%;\n  top:-11rem;\n  left: 0;\n}\n\n.wedding_flowers--reverse {\n  left: 50%;\n  transform: scaleX(-1);\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_header--scrolled {\n    border-bottom: 1px solid #cecece;\n  }\n\n  .wedding_header:hover .wedding_menu_item,\n  .wedding_header--scrolled .wedding_menu_item {\n    color: #000;\n    border-bottom: 1px solid white;\n    transition: border-bottom 0.25s ease-in-out;\n  }\n\n  .wedding_header:hover .wedding_menu_item:hover,\n  .wedding_header--scrolled .wedding_menu_item:hover {\n    color: #000;\n    border-bottom: 1px solid #000;\n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n    background-color: rgba(255,255,255,0.4);\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -10rem;\n  }\n\n  .wedding_flowers--container {\n    position:relative;\n    display:block;\n  }\n\n  .wedding_flowers {\n    top:-9rem;\n  }\n\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n\n  .overlay--always {\n    display: block;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_header:hover, \n  .wedding_header--scrolled {\n    background-color: rgba(255,255,255,1);\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n  .wedding_sectionTitle {\n    font-size: 8rem;\n  }\n\n  .wedding_title--hotel-info {\n    font-size: 8rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -15rem;\n  }\n\n  .wedding_flowers {\n    top:-11rem;\n  }\n}", ""]);
 
 	// exports
 
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports) {
 
 	/*
@@ -31141,13 +31153,13 @@
 
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/hamburger_icon.png";
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -31399,7 +31411,7 @@
 
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31423,14 +31435,14 @@
 	        ), 
 	        React.createElement(Section_1.Section, {className: "wedding_text_section"}, 
 	            React.createElement(Section_1.SectionTitle, null, "Our Story"), 
-	            React.createElement(Section_1.SectionBody, null, "Our mutual friends Kylla and Miki set us up originally," + ' ' + "thinking we'd be perfect for each other. After our first date," + ' ' + "we both decided we weren't interested! But several months later" + ' ' + "we happened to go on the same group camping trip, and saw each other in a" + ' ' + "new light. We fell in love. And we can't wait to spend the rest of our" + ' ' + "lives together."))));
+	            React.createElement(Section_1.SectionBody, null, "After first meeting in college, Jose and Mercedes didn’t reconnect again until attending a welcome home celebration for a mutual friend." + ' ' + "That night, Jose asked Mercedes out on a date (which freaked Mercedes out), but after giving it some thought, she said the first YES." + ' ' + "Jose and Mercedes started dating long distance, with Jose living in Philadelphia and Mercedes living in NYC." + ' ' + "Eventually Jose moved to NYC, (he said it was because he always wanted to live in NYC, but we all know it was really for Mercedes!) and after a few months, they both said YES to living together." + ' ' + "Fast forward to November 23, 2015 when Jose popped the big question and Mercedes said the YES that brought you here." + ' ' + "Now it’s time to celebrate their love as they say I Do in Puerto Vallarta, Mexico!"))));
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = TheWedding;
 
 
 /***/ },
-/* 190 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31440,8 +31452,10 @@
 	function WhenAndWhere() {
 	    return (React.createElement(Container_1.default, null, 
 	        React.createElement(Section_1.Section, {className: "wedding_savethedate--background"}, 
-	            React.createElement("img", {className: "wedding_savethedate", src: "images/savethedate.jpg"})
-	        )
+	            React.createElement("img", {className: "wedding_savethedate", src: "images/savethedate.jpg"}), 
+	            React.createElement("div", {className: "wedding_flowers--container"}, 
+	                React.createElement("img", {className: "wedding_flowers", src: "images/flowers_without_bg.png"}), 
+	                React.createElement("img", {className: "wedding_flowers wedding_flowers--reverse", src: "images/flowers_without_bg.png"})))
 	    ));
 	}
 	exports.WhenAndWhere = WhenAndWhere;

@@ -49,17 +49,47 @@
 	var ReactDOM = __webpack_require__(30);
 	var Container_1 = __webpack_require__(163);
 	var CoverPage_1 = __webpack_require__(164);
-	var WeddingHeader_1 = __webpack_require__(181);
+	var WeddingHeader_1 = __webpack_require__(182);
 	var Section_1 = __webpack_require__(166);
-	__webpack_require__(184);
+	__webpack_require__(185);
 	ReactDOM.render(React.createElement(Container_1.default, null, 
 	    React.createElement(WeddingHeader_1.default, null), 
-	    React.createElement(CoverPage_1.default, {className: "wedding_hotelInfo"}, 
+	    React.createElement(CoverPage_1.default, {className: "wedding_hotelInfo", showOverlay: true}, 
 	        React.createElement(Section_1.SectionTitle, {className: "wedding_title--hotel-info"}, "Hotel Information")
 	    ), 
 	    React.createElement(Section_1.Section, {className: "wedding_text_section"}, 
 	        React.createElement(Section_1.SectionTitle, null, "Now Amber"), 
-	        React.createElement(Section_1.SectionBody, null, "Hotel Information"))), document.getElementById('app'));
+	        React.createElement(Section_1.SectionBody, null, 
+	            React.createElement("p", null, "We chose to have a destination wedding in Puerto Vallarta, Mexico, because we wanted a location that a majority of our guests had not been to yet—that way this trip could truly feel like a vacation!" + ' ' + "We have partnered up with DestinationWeddings.com and have reserved a block of rooms at the all-inclusive Now Amber Resort to try to make this as easy and stress-free as possible for all of our guests attending." + ' ' + "We chose DestinationWeddings.com because the site allows for guests to pay for their hotel stay on a payment plan, so for those on a tight budget (who isn’t?), it makes it possible to attend our wedding (if you are so inclined), plus the site offered really competitive pricing for the hotel rooms."), 
+	            React.createElement("p", null, "Jenny Ruano is the name of our wedding specialist who will be taking care of travel accommodations. She has truly been really great to work with, so I trust that all of you are in good hands with her." + ' ' + "Now that we’ve got that out of the way, the next question is: how do you book?"), 
+	            React.createElement("h3", null, "Here’s what you need to do!"), 
+	            React.createElement("p", null, 
+	                "Visit ", 
+	                React.createElement("a", {href: "http://www.destinationweddings.com/", target: "_blank"}, "DestinationWeddings.com"), 
+	                " ", 
+	                React.createElement("br", null), 
+	                "Click on ", 
+	                React.createElement("span", null, "ARE YOU A WEDDING GUEST? "), 
+	                React.createElement("a", {href: "http://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx", target: "_blank"}, "GET STARTED."), 
+	                " ", 
+	                React.createElement("br", null)), 
+	            React.createElement("p", null, 
+	                "Enter the following information:", 
+	                React.createElement("br", null), 
+	                "Last Name of Couple: ", 
+	                React.createElement("strong", null, "Medina or Fernandez"), 
+	                " (either of our last names will work) ", 
+	                React.createElement("br", null), 
+	                React.createElement("strong", null, "Passcode: MJ1142017"), 
+	                " ", 
+	                React.createElement("br", null)), 
+	            React.createElement("p", null, "Register and find all the hotel and booking information at your fingertips!"), 
+	            React.createElement("p", null, 
+	                "We ask that you please use this site to book your hotel room as we have a room rate/block guarantee. :) ", 
+	                React.createElement("br", null), 
+	                "If you have any questions, feel free to reach out to either one of us: ", 
+	                React.createElement("a", {href: "mailto:mjfiesta2forever@gmail.com?Subject=Wedding%20Questions", target: "_top"}, " mjfiesta2forever@gmail.com "), 
+	                "<3")))), document.getElementById('app'));
 
 
 /***/ },
@@ -20503,7 +20533,7 @@
 	        var className = (this.props || '').className;
 	        return (React.createElement(Container_1.default, null, 
 	            React.createElement(Section_1.Section, {className: "wedding_coverpage " + className}, 
-	                React.createElement(Overlay_1.default, null), 
+	                React.createElement(Overlay_1.default, {always: this.props.showOverlay}), 
 	                this.props.children)
 	        ));
 	    };
@@ -20519,8 +20549,14 @@
 
 	"use strict";
 	var React = __webpack_require__(1);
-	function Overlay() {
-	    return (React.createElement("div", {className: "overlay"}));
+	function Overlay(props) {
+	    function displayAlways() {
+	        if (props.always) {
+	            return 'overlay--always';
+	        }
+	        return '';
+	    }
+	    return (React.createElement("div", {className: 'overlay ' + displayAlways()}));
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = Overlay;
@@ -20598,9 +20634,8 @@
 
 	"use strict";
 	__webpack_require__(168);
-	console.log('hi');
+	__webpack_require__(169);
 	module.exports = [
-	    __webpack_require__(169),
 	    __webpack_require__(170),
 	    __webpack_require__(171),
 	    __webpack_require__(172),
@@ -20612,6 +20647,7 @@
 	    __webpack_require__(178),
 	    __webpack_require__(179),
 	    __webpack_require__(180),
+	    __webpack_require__(181),
 	];
 
 
@@ -20625,76 +20661,82 @@
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic1.jpg";
+	module.exports = __webpack_require__.p + "./images/flowers_without_bg.png";
 
 /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic2.jpg";
+	module.exports = __webpack_require__.p + "./images/pic1.jpg";
 
 /***/ },
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic3.jpg";
+	module.exports = __webpack_require__.p + "./images/pic2.jpg";
 
 /***/ },
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic4.jpg";
+	module.exports = __webpack_require__.p + "./images/pic3.jpg";
 
 /***/ },
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic5.jpg";
+	module.exports = __webpack_require__.p + "./images/pic4.jpg";
 
 /***/ },
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic6.jpg";
+	module.exports = __webpack_require__.p + "./images/pic5.jpg";
 
 /***/ },
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic7.jpg";
+	module.exports = __webpack_require__.p + "./images/pic6.jpg";
 
 /***/ },
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic8.jpg";
+	module.exports = __webpack_require__.p + "./images/pic7.jpg";
 
 /***/ },
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic9.jpg";
+	module.exports = __webpack_require__.p + "./images/pic8.jpg";
 
 /***/ },
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic10.jpg";
+	module.exports = __webpack_require__.p + "./images/pic9.jpg";
 
 /***/ },
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic11.jpg";
+	module.exports = __webpack_require__.p + "./images/pic10.jpg";
 
 /***/ },
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/pic12.jpg";
+	module.exports = __webpack_require__.p + "./images/pic11.jpg";
 
 /***/ },
 /* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/pic12.jpg";
+
+/***/ },
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -20704,8 +20746,8 @@
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var React = __webpack_require__(1);
-	var $ = __webpack_require__(182);
-	var Header_1 = __webpack_require__(183);
+	var $ = __webpack_require__(183);
+	var Header_1 = __webpack_require__(184);
 	var SCROLL_OFFSET = 250;
 	function scrollHandler($el) {
 	    $(window).off('scroll')
@@ -20756,7 +20798,7 @@
 
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -30982,7 +31024,7 @@
 
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31049,16 +31091,16 @@
 
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(185);
+	var content = __webpack_require__(186);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(188)(content, {});
+	var update = __webpack_require__(189)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31075,21 +31117,21 @@
 	}
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(186)();
+	exports = module.exports = __webpack_require__(187)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'PT Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(187) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n}\n.title {\n  font-family: 'Satisfy', cursive;\n  \n}\n\n.wedding_header {\n  background-color: white;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_menu {\n  display: none;\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu--mobile-show {\n  display: block;\n}\n\n.wedding_menu_item {\n  display: block;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_coverpage {\n  background-attachment: fixed;\n  background-size: cover;\n  overflow: hidden;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-position: 0 50%;\n  background-image: url(" + __webpack_require__(172) + ");\n  min-height: 720px;\n  min-height: 95vh;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_ourTravels {\n  padding: 20rem 0;\n  background-image: url(" + __webpack_require__(177) + ");\n}\n\n.wedding_hotelInfo {\n  padding: 20rem 0;\n  background-image: url('http://www.surfandsunshine.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-14-at-12.38.36-PM.png');\n}\n\n.wedding_registry {\n  padding: 20rem 0;\n  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');\n}\n\n.wedding_text_section {\n  padding: 3rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n  position: relative;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n  vertical-align: top;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n  border-bottom: 1px solid #000;\n}\n\n.wedding_savethedate {\n  display: block;\n  max-width: 100%;\n  margin: 0 auto;\n}\n\n.wedding_savethedate--background {\n  padding: 5.5rem 0;\n  background-size: 650px;\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_header--scrolled {\n    border-bottom: 1px solid #cecece;\n  }\n\n  .wedding_header:hover .wedding_menu_item,\n  .wedding_header--scrolled .wedding_menu_item {\n    color: #000;\n    border-bottom: 1px solid white;\n    transition: border-bottom 0.25s ease-in-out;\n  }\n\n  .wedding_header:hover .wedding_menu_item:hover,\n  .wedding_header--scrolled .wedding_menu_item:hover {\n    color: #000;\n    border-bottom: 1px solid #000;\n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n    background-color: rgba(255,255,255,0.4);\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -10rem;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_header:hover, \n  .wedding_header--scrolled {\n    background-color: rgba(255,255,255,1);\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n  .wedding_sectionTitle {\n    font-size: 8rem;\n  }\n\n  .wedding_title--hotel-info {\n    font-size: 8rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -15rem;\n  }\n}", ""]);
+	exports.push([module.id, "* {\n  box-sizing: border-box;\n}\na {\n  color: black;\n}\nhtml, body, #app {\n  font-size: 12px;\n  font-family: 'PT Sans', sans-serif;\n  background-color: #FFFFFF;\n  margin: 0;\n  color: #000000;\n}\n\n.section-wrapper {\n  background-color:white;\n  position:relative;\n}\n\n.align-center {\n  text-align: center;\n}\n\n.hamburger {\n  background-image: url(" + __webpack_require__(188) + ");\n  background-repeat: no-repeat;\n  background-color: transparent;\n  border: none;\n  padding: 1rem;\n  background-size: cover;\n}\n\n.overlay {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.2);\n}\n\n.title {\n  font-family: 'Satisfy', cursive;\n  \n}\n\n.wedding_header {\n  background-color: white;\n  position: fixed;\n  z-index: 3;\n  width: 100%;\n  transition: background-color 0.25s ease-in-out;\n}\n\n.wedding_menu {\n  display: none;\n  list-style-type: none;\n  text-align: center;\n  font-size: 1rem;\n}\n\n.wedding_menu--mobile-show {\n  display: block;\n}\n\n.wedding_menu_item {\n  display: block;\n  padding: 1rem 0;\n  font-size: 1.5em;\n  text-transform: uppercase;\n  cursor: pointer;\n  text-decoration: none;\n  border-bottom: 1px solid transparent;\n}\n\n.wedding_coverpage {\n  background-attachment: fixed;\n  background-size: cover;\n  overflow: hidden;\n  color: #FFF;\n  font-size: 5rem;\n  background-position: center center;\n  background-repeat: no-repeat;\n  font-weight: 100;\n  z-index: 2;\n}\n\n.wedding_ourStory {\n  background-position: 0 50%;\n  background-image: url(" + __webpack_require__(173) + ");\n  min-height: 720px;\n  min-height: 95vh;\n}\n\n.wedding_ourStory--body {\n  padding: 12rem 0;\n  z-index: 0;\n}\n\n.wedding_ourStory--body-name {\n  font-size: 8rem;\n  line-height: 6rem;\n  font-weight: 700;\n  position:relative;\n}\n.wedding_ourStory--body-amp {\n  font-size: 4rem;\n}\n.wedding_ourStory--body-date {\n  font-size: 2rem;\n  position:relative;\n  top: 10px;\n}\n\n.wedding_ourTravels {\n  padding: 20rem 0;\n  background-image: url(" + __webpack_require__(178) + ");\n}\n\n.wedding_hotelInfo {\n  padding: 20rem 0;\n  background-image: url('http://www.surfandsunshine.com/wp-content/uploads/2013/05/Screen-Shot-2013-05-14-at-12.38.36-PM.png');\n}\n\n.wedding_registry {\n  padding: 20rem 0;\n  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');\n}\n\n.wedding_text_section {\n  padding: 6rem 0 8rem;\n  margin: 0 auto;\n  width: 75%;\n  font-size: 1.25rem;\n}\n\n.wedding_sectionTitle {\n  font-weight: 400;\n  font-size: 8rem;\n  padding: 1rem;\n  position: relative;\n}\n\n.wedding_sectionBody {\n  font-size: 1.5rem;\n  line-height: 2.5rem;\n}\n\n.wedding_sectionPicBody {\n  font-size: 1em;\n  margin: 0 auto;\n  padding: 5rem 0;\n  width: 90%;\n}\n\n.wedding_sectionImg {\n  width: 95%;\n  margin: 0.5rem 0;\n  vertical-align: top;\n}\n\n.wedding_mobile-nav {\n  padding: 2rem;\n  text-align: right;\n  border-bottom: 1px solid #000;\n}\n\n.wedding_savethedate {\n  display: block;\n  max-width: 100%;\n  margin: 0 auto;\n}\n\n.wedding_flowers--container {\n  position:relative;\n  display:none;\n}\n\n.wedding_flowers {\n  position:absolute;\n  width:50%;\n  top:-11rem;\n  left: 0;\n}\n\n.wedding_flowers--reverse {\n  left: 50%;\n  transform: scaleX(-1);\n}\n\n@media (min-width: 664px) {\n  .wedding_mobile-nav {\n    display:none; \n  }\n\n  .wedding_header--scrolled {\n    border-bottom: 1px solid #cecece;\n  }\n\n  .wedding_header:hover .wedding_menu_item,\n  .wedding_header--scrolled .wedding_menu_item {\n    color: #000;\n    border-bottom: 1px solid white;\n    transition: border-bottom 0.25s ease-in-out;\n  }\n\n  .wedding_header:hover .wedding_menu_item:hover,\n  .wedding_header--scrolled .wedding_menu_item:hover {\n    color: #000;\n    border-bottom: 1px solid #000;\n  }\n\n  .wedding_menu {\n    display: block;\n    padding: 2rem 0;\n    line-height: 1rem;\n    margin: 0;\n    background-color: rgba(255,255,255,0.4);\n  }\n\n  .wedding_menu_item {\n    display:inline;\n    margin: 0 2rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -10rem;\n  }\n\n  .wedding_flowers--container {\n    position:relative;\n    display:block;\n  }\n\n  .wedding_flowers {\n    top:-9rem;\n  }\n\n}\n\n@media screen and (min-width: 768px) {\n  .overlay {\n    display:none;\n  }\n\n  .overlay--always {\n    display: block;\n  }\n  \n  .wedding_sectionPicBody {\n    padding: 12rem 0;\n    width: 80%;\n  }\n\n  .wedding_ourStory--body-name {\n    position: static;\n  }\n\n  .wedding_sectionImg {\n    width: 280px;\n    margin: 0.5rem 1rem;\n    border: 1px solid;\n  }\n\n  .wedding_header {\n    background-color: transparent;\n  }\n\n  .wedding_header:hover, \n  .wedding_header--scrolled {\n    background-color: rgba(255,255,255,1);\n  }\n\n  .wedding_menu_item {\n    padding: 0 0.5rem;\n  }\n\n  .wedding_ourStory--body {\n    padding: 10rem 0 20rem 5%;\n    position: fixed;\n    z-index: 0;\n  }\n  .wedding_sectionTitle {\n    font-size: 8rem;\n  }\n\n  .wedding_title--hotel-info {\n    font-size: 8rem;\n  }\n  .wedding_ourTravels {\n    background-position: 0 -15rem;\n  }\n\n  .wedding_flowers {\n    top:-11rem;\n  }\n}", ""]);
 
 	// exports
 
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports) {
 
 	/*
@@ -31145,13 +31187,13 @@
 
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/hamburger_icon.png";
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
