@@ -9,7 +9,7 @@ import './index.css';
 ReactDOM.render(
   <Container>
       <WeddingHeader />
-      <CoverPage className="wedding_registry">
+      <CoverPage className="wedding_registry" showOverlay={true}>
         <SectionTitle>Registry</SectionTitle>
       </CoverPage>
       <Section className="wedding_text_section">

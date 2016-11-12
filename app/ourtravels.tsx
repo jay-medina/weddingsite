@@ -10,7 +10,7 @@ import './index.css';
 ReactDOM.render(
   <Container>
     <WeddingHeader />
-    <CoverPage className="wedding_ourTravels">
+    <CoverPage className="wedding_ourTravels" showOverlay={true}>
       <SectionTitle className="wedding_title--our-travels">Our Travels</SectionTitle>
     </CoverPage>
     <Section className="wedding_sectionPicBody">

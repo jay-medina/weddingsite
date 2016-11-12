@@ -36,8 +36,9 @@ html, body, #app {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
+
 .title {
   font-family: 'Satisfy', cursive;
   
@@ -142,6 +143,7 @@ html, body, #app {
 
 .wedding_sectionBody {
   font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .wedding_sectionPicBody {
@@ -167,11 +169,6 @@ html, body, #app {
   display: block;
   max-width: 100%;
   margin: 0 auto;
-}
-
-.wedding_savethedate--background {
-  padding: 5.5rem 0 0;
-  background-size: 650px;
 }
 
 .wedding_flowers--container {
@@ -243,6 +240,10 @@ html, body, #app {
 @media screen and (min-width: 768px) {
   .overlay {
     display:none;
+  }
+
+  .overlay--always {
+    display: block;
   }
   
   .wedding_sectionPicBody {
