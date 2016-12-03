@@ -9,9 +9,9 @@ export interface SectionProps {
 
 export class SectionTitle extends React.Component<SectionProps, {}> {
   render() {
-    const { className } = this.props || ''; 
+    const { className = '', children} = this.props; 
     return (
-      <div className={"wedding_sectionTitle title " + className}>{this.props.children}</div>
+      <div className={`wedding_sectionTitle title ${className}`}>{children}</div>
     )
   }
 }

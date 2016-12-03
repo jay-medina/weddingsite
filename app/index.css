@@ -124,7 +124,10 @@ html, body, #app {
 
 .wedding_registry {
   padding: 20rem 0;
-  background-image: url('http://www.kirby.com/wp-content/uploads/2013/03/wedding-registry.jpg');
+}
+
+.wedding_registry--title {
+  color: black;
 }
 
 .wedding_text_section {

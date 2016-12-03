@@ -9,13 +9,13 @@ import './index.css';
 ReactDOM.render(
   <Container>
       <WeddingHeader />
-      <CoverPage className="wedding_registry" showOverlay={true}>
-        <SectionTitle>Registry</SectionTitle>
+      <CoverPage className="wedding_registry">
+        <SectionTitle className="wedding_registry--title">Coming Soon</SectionTitle>
       </CoverPage>
       <Section className="wedding_text_section">
-        <SectionTitle>Registry</SectionTitle>
+        <SectionTitle></SectionTitle>
         <SectionBody>
-            Registry Section
+            
         </SectionBody>
       </Section>
     </Container>
