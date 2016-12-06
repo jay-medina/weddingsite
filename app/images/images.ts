@@ -15,4 +15,6 @@ module.exports = [
   require('./pic10.jpg'),
   require('./pic11.jpg'),
   require('./pic12.jpg'),
+  require('./pic13.jpg'),
+  require('./pic14.jpg'),
 ];
