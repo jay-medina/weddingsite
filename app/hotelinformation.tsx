@@ -24,7 +24,7 @@ We chose DestinationWeddings.com because the site allows for guests to pay for t
 Jenny Ruano is the name of our wedding specialist who will be taking care of travel accommodations. She has truly been really great to work with, so I trust that all of you are in good hands with her.
 Now that we’ve got that out of the way, the next question is: how do you book?
           </p>
-          <h3>Here’s what you need to do!</h3>
+          <h3>Hotel Booking Information</h3>
           <p>
             Visit <a href="http://www.destinationweddings.com/" target="_blank">DestinationWeddings.com</a> <br />
             Click on <span>ARE YOU A WEDDING GUEST? </span><a href="http://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx" target="_blank">GET STARTED.</a> <br/>
@@ -41,8 +41,15 @@ Now that we’ve got that out of the way, the next question is: how do you book?
             We ask that you please use this site to book your hotel room as we have a room rate/block guarantee. :) <br />
 
             If you have any questions, feel free to reach out to either one of us: <a href="mailto:mjfiesta2forever@gmail.com?Subject=Wedding%20Questions" target="_top"> mjfiesta2forever@gmail.com </a>
-            &lt;3
+            ❤️
           </p>
+          <h3>Flight Booking Information</h3>
+          <p>
+            Airfare can be booked separately. <br />
+            If interested, The wedding specialist <a href="mailto:jruano@destinationweddings.com">Jenny Ruano</a> can help with booking your airfare. <br />
+            She can be contacted by email at: <a href="mailto:jruano@destinationweddings.com">jruano@destinationweddings.com</a> or by phone at <a href="tel:+9185162327">918-516-2327</a>.
+          </p>
+         
         </SectionBody>
       </Section>
     </Container>
