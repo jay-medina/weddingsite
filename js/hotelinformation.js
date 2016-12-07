@@ -62,7 +62,7 @@
 	        React.createElement(Section_1.SectionBody, null, 
 	            React.createElement("p", null, "We chose to have a destination wedding in Puerto Vallarta, Mexico, because we wanted a location that a majority of our guests had not been to yet—that way this trip could truly feel like a vacation!" + ' ' + "We have partnered up with DestinationWeddings.com and have reserved a block of rooms at the all-inclusive Now Amber Resort to try to make this as easy and stress-free as possible for all of our guests attending." + ' ' + "We chose DestinationWeddings.com because the site allows for guests to pay for their hotel stay on a payment plan, so for those on a tight budget (who isn’t?), it makes it possible to attend our wedding (if you are so inclined), plus the site offered really competitive pricing for the hotel rooms."), 
 	            React.createElement("p", null, "Jenny Ruano is the name of our wedding specialist who will be taking care of travel accommodations. She has truly been really great to work with, so I trust that all of you are in good hands with her." + ' ' + "Now that we’ve got that out of the way, the next question is: how do you book?"), 
-	            React.createElement("h3", null, "Here’s what you need to do!"), 
+	            React.createElement("h3", null, "Hotel Booking Information"), 
 	            React.createElement("p", null, 
 	                "Visit ", 
 	                React.createElement("a", {href: "http://www.destinationweddings.com/", target: "_blank"}, "DestinationWeddings.com"), 
@@ -89,7 +89,20 @@
 	                React.createElement("br", null), 
 	                "If you have any questions, feel free to reach out to either one of us: ", 
 	                React.createElement("a", {href: "mailto:mjfiesta2forever@gmail.com?Subject=Wedding%20Questions", target: "_top"}, " mjfiesta2forever@gmail.com "), 
-	                "<3")))), document.getElementById('app'));
+	                "❤️"), 
+	            React.createElement("h3", null, "Flight Booking Information"), 
+	            React.createElement("p", null, 
+	                "Airfare can be booked separately. ", 
+	                React.createElement("br", null), 
+	                "If interested, The wedding specialist ", 
+	                React.createElement("a", {href: "mailto:jruano@destinationweddings.com"}, "Jenny Ruano"), 
+	                " can help with booking your airfare. ", 
+	                React.createElement("br", null), 
+	                "She can be contacted by email at: ", 
+	                React.createElement("a", {href: "mailto:jruano@destinationweddings.com"}, "jruano@destinationweddings.com"), 
+	                " or by phone at ", 
+	                React.createElement("a", {href: "tel:+9185162327"}, "918-516-2327"), 
+	                ".")))), document.getElementById('app'));
 
 
 /***/ },
