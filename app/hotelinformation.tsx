@@ -18,7 +18,7 @@ ReactDOM.render(
           <p>
             We chose to have a destination wedding in Puerto Vallarta, Mexico, because we wanted a location that a majority of our guests had not been to yet—that way this trip could truly feel like a vacation!
 We have partnered up with DestinationWeddings.com and have reserved a block of rooms at the all-inclusive Now Amber Resort to try to make this as easy and stress-free as possible for all of our guests attending.
-We chose DestinationWeddings.com because the site allows for guests to pay for their hotel stay on a payment plan, so for those on a tight budget (who isn’t?), it makes it possible to attend our wedding (if you are so inclined), plus the site offered really competitive pricing for the hotel rooms.
+We chose DestinationWeddings.com because the site allows for guests to pay for their hotel stay on a payment plan, so for those on a tight budget (who isn’t?), it makes it possible to attend our wedding.
           </p>
           <p>
 Jenny Ruano is the name of our wedding specialist who will be taking care of travel accommodations. She has truly been really great to work with, so I trust that all of you are in good hands with her.
@@ -46,7 +46,7 @@ Now that we’ve got that out of the way, the next question is: how do you book?
           <h3>Flight Booking Information</h3>
           <p>
             Airfare can be booked separately. <br />
-            If interested, The wedding specialist <a href="mailto:jruano@destinationweddings.com">Jenny Ruano</a> can help with booking your airfare. <br />
+            If interested, our wedding specialist, <a href="mailto:jruano@destinationweddings.com">Jenny Ruano</a> can help with booking your airfare. <br />
             She can be contacted by email at: <a href="mailto:jruano@destinationweddings.com">jruano@destinationweddings.com</a> or by phone at <a href="tel:+9185162327">918-516-2327</a>.
           </p>
          
