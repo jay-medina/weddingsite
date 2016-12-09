@@ -26,11 +26,11 @@ Now that we’ve got that out of the way, the next question is: how do you book?
           </p>
           <h3>Hotel Booking Information</h3>
           <p>
-            Visit <a href="http://www.destinationweddings.com/" target="_blank">DestinationWeddings.com</a> <br />
-            Click on <span>ARE YOU A WEDDING GUEST? </span><a href="http://www.destinationweddings.com/Weddings/Guests/AttendaWedding.aspx" target="_blank">GET STARTED.</a> <br/>
+            Visit <a href="http://www.destinationweddings.com/MercedesJose" target="_blank">DestinationWeddings.com</a> <br />
           </p>
           <p>
-            Enter the following information:<br />
+            If the information is not prepopulated, <br />
+            Please enter the following information:<br />
             Last Name of Couple: <strong>Medina or Fernandez</strong> (either of our last names will work) <br/>
             <strong>Passcode: MJ1142017</strong> <br/>
           </p>
