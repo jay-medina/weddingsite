@@ -3,12 +3,12 @@ const htmlPages = require('./htmlPages');
 
 function forProduction() {
   const argv = process.argv;
-  return argv.length > 2 && argv[2] === '--production';
+  return argv.length > 2 && argv[2] === '--env=production';
 }
 
 function getPlugins() {
 
-  if(forProduction()){
+  if (forProduction()) {
     return [
       new webpack.DefinePlugin({
         "process.env": {
@@ -22,5 +22,6 @@ function getPlugins() {
 }
 
 module.exports = {
-  getPlugins: getPlugins
+  getPlugins,
+  forProduction,
 };
