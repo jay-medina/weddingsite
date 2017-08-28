@@ -5,11 +5,8 @@ interface MenuOptionProps {
   link: string
 }
 
-class MenuOption extends React.Component<MenuOptionProps, {}> {
-  render() {
-    return <a className="wedding_menu_item" 
-              href={this.props.link}>{this.props.children}</a>
-  }
+const MenuOption: React.StatelessComponent<MenuOptionProps> = ({ link, children }) => {
+  return <a className="wedding_menu_item" href={link}>{children}</a>
 }
 
 interface MenuProps {
@@ -17,36 +14,25 @@ interface MenuProps {
   onClick: () => void
 }
 
-class Menu extends React.Component<MenuProps, {}> {
-  onClick() {
-    this.props.onClick();
-  }
-  render() {
-    const {className = ''} = this.props;
-    return <Container className={`wedding_menu ${className}`} onClick={this.onClick.bind(this)}>{this.props.children}</Container>
-  }
+const Menu: React.StatelessComponent<MenuProps> = (props) => {
+  const { className = '', children, onClick } = props;
+  return <Container className={`wedding_menu ${className}`} onClick={onClick}>{children}</Container>
 }
 
-class Header extends React.Component<{}, {}> {
-  render() {
-    return <Container className="wedding_header">{this.props.children}</Container>;
-  }
+const Header: React.StatelessComponent = ({ children }) => {
+  return <Container className="wedding_header">{children}</Container>;
 }
 
 interface MobileNavProps {
-  onClick?: () => void
+  onClick: () => void
 }
 
-class MobileNav extends React.Component<MobileNavProps, {}> {
-  onClick() {
-    this.props.onClick()
-  }
-  render() {
-    return (
-      <Container className="wedding_mobile-nav">
-        <button className={'hamburger'} onClick={this.onClick.bind(this)}></button>
-      </Container>);
-  }
+const MobileNav: React.StatelessComponent<MobileNavProps> = (props) => {
+  return (
+    <Container className="wedding_mobile-nav">
+      <button className={'hamburger'} onClick={props.onClick}></button>
+    </Container>
+  );
 }
 
 export {
