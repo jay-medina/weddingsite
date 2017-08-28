@@ -1,10 +1,5 @@
 const path = require('path');
-const plugins = require('./buildFiles/plugins');
-
-function forProduction() {
-  const argv = process.argv;
-  return argv.length > 2 && argv[2] === '--production';
-}
+const { forProduction, getPlugins } = require('./buildFiles/plugins');
 
 module.exports = {
   entry: {
@@ -46,5 +41,5 @@ module.exports = {
       }
     ]
   },
-  plugins: plugins.getPlugins()
+  plugins: getPlugins()
 };
