@@ -1,5 +1,5 @@
 const path = require('path');
-const plugins = require('./buildFiles/plugins.js');
+const plugins = require('./buildFiles/plugins');
 
 function forProduction() {
   const argv = process.argv;
@@ -14,32 +14,37 @@ module.exports = {
     hotelinformation: './app/hotelinformation.tsx'
   },
   output: {
-    path: 'dist/',
-    publicPath: (forProduction()) ? 'http://mjfiesta2forever.com/': '',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: (forProduction()) ? 'http://mjfiesta2forever.com/' : '',
     filename: 'js/[name].js'
   },
   resolve: {
-    extensions: ['','.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
-      loaders: [
-        {
-          test: /\.css$/,
-          loader: "style!css"
-        },
-        {
-          test: /\.html$/,
-          loader: 'html'
-        },
-        {
-          test: /\.tsx?$/,
-          loader: "ts-loader"
-        },
-        {
-          test: /\.(jpg|png)$/,
-          loader: 'file?name=./images/[name].[ext]'
-        }
-      ]
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader'
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader"
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: 'file-loader?name=./images/[name].[ext]'
+      }
+    ]
   },
   plugins: plugins.getPlugins()
 };

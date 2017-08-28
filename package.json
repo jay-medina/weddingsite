@@ -19,24 +19,24 @@
   },
   "homepage": "https://github.com/mrfunkycold/weddingsite#readme",
   "devDependencies": {
-    "@types/node": "^6.0.46",
-    "@types/react": "^0.14.37",
-    "@types/jquery": "^2.0.33",
-    "@types/react-dom": "^0.14.17",
-    "css-loader": "^0.25.0",
-    "file-loader": "^0.9.0",
-    "html-loader": "^0.4.4",
-    "html-webpack-plugin": "^2.22.0",
-    "style-loader": "^0.13.1",
-    "ts-loader": "^0.8.2",
-    "typescript": "^2.0.3",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.2"
+    "@types/jquery": "^3.2.12",
+    "@types/node": "^8.0.25",
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
+    "css-loader": "^0.28.5",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.4",
+    "typescript": "^2.5.1",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "jquery": "^3.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
