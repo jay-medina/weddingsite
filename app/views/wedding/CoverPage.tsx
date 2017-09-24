@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Container from '../common/Container';
 import Overlay from '../common/Overlay';
-import { Section, SectionPictureBody } from '../common/Section';
+import { Section } from '../common/Section';
 
 export interface CoverPageProps {
   title?: string,

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import Container from './views/common/Container';
-import BetterTogether from './views/wedding/TheWedding';
 import WeddingHeader from './views/wedding/WeddingHeader';
 import CoverPage from './views/wedding/CoverPage';
 import {Section, SectionPictureBody, SectionTitle} from './views/common/Section';

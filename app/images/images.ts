@@ -2,7 +2,7 @@ import './savethedate.jpg';
 import './flowers_without_bg.png';
 
 
-module.exports = [ 
+export default [ 
   require('./pic1.jpg'),
   require('./pic2.jpg'),
   require('./pic3.jpg'),
