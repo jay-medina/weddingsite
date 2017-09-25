@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const images = require('../../images/images');
+import images from '../../images/images';
 
 export interface SectionProps {
   className?: string
@@ -36,9 +36,9 @@ export const Section: React.StatelessComponent<SectionProps> = (props) => {
 
 export const SectionPictureBody: React.StatelessComponent = () => {
   function renderImages() {
+    console.log(images);
     return images.map(
       (url: string, index: number) => <img key={index} className="wedding_sectionImg" src={url} />
-
     )
   }
 

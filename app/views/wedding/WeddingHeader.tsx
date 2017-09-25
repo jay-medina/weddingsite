@@ -19,11 +19,14 @@ function scrollHandler($el: JQuery) {
     });
 }
 
+export interface WeddingHeaderProps {
+  alreadyScrolled?: boolean;
+}
 export interface WeddingHeaderState {
   show?: boolean
 }
-export default class WeddingHeader extends React.PureComponent<{}, WeddingHeaderState> {
-  constructor(props: {}) {
+export default class WeddingHeader extends React.PureComponent<WeddingHeaderProps, WeddingHeaderState> {
+  constructor(props: WeddingHeaderProps) {
     super(props)
     this.state = { show: false };
   }
@@ -40,7 +43,7 @@ export default class WeddingHeader extends React.PureComponent<{}, WeddingHeader
   }
   render() {
     return (
-      <Header>
+      <Header alreadyScrolled={this.props.alreadyScrolled}>
         <MobileNav onClick={this.onMobileClick.bind(this)} />
         <Menu className={this.getMobileMenuClassName()} onClick={this.onMenuItemClick.bind(this)}>
           <MenuOption link="/" >The Wedding</MenuOption>
@@ -52,7 +55,9 @@ export default class WeddingHeader extends React.PureComponent<{}, WeddingHeader
     );
   }
   componentDidMount() {
-    const $header = $('.wedding_header');
-    scrollHandler($header);
+    if (! this.props.alreadyScrolled) {
+      const $header = $('.wedding_header');
+      scrollHandler($header);
+    }
   }
 }
