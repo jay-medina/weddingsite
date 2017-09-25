@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Container from '../common/Container';
-import {Section, SectionTitle, SectionBody} from '../common/Section';
+import { Section } from '../common/Section';
 
 export function WhenAndWhere() {
   return (

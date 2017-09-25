@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {Section, SectionBody, SectionTitle} from '../common/Section';
-import Overlay from '../common/Overlay';
 import CoverPage from './CoverPage';
 
 export default function TheWedding() {

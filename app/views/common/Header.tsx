@@ -19,8 +19,17 @@ const Menu: React.StatelessComponent<MenuProps> = (props) => {
   return <Container className={`wedding_menu ${className}`} onClick={onClick}>{children}</Container>
 }
 
-const Header: React.StatelessComponent = ({ children }) => {
-  return <Container className="wedding_header">{children}</Container>;
+interface HeaderProps {
+  alreadyScrolled?: boolean;
+}
+
+const Header: React.StatelessComponent<HeaderProps> = ({ children, alreadyScrolled }) => {
+  let className = 'wedding_header';
+
+  if (alreadyScrolled) {
+    className = `${className} wedding_header--scrolled`;  
+  }
+  return <Container className={className}>{children}</Container>;
 }
 
 interface MobileNavProps {
